@@ -7,26 +7,30 @@
 
 import SwiftUI
 import SwiftData
+#if canImport(Appkit)
+import Appkit
+#endif
 
 @main
-struct BirthdaZApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+struct BirthdazApp: App {
+    @Environment(\.openWindow) private var openWindow
 
     var body: some Scene {
-        WindowGroup {
+        WindowGroup(id: Constant.WindowID_BirthdazPanel.rawValue) {
             ContentView()
+                .modelContainer(for: [Person.self])
         }
-        .modelContainer(sharedModelContainer)
+        #if os(macOS)
+        MenuBarExtra(content: {
+            Button("Show panel") {
+                openWindow(id: WindowID.birthdazPanel.rawValue)
+            }
+            Button("Quit") {
+                NSApplication.shared.terminate(nil)
+            }
+        }, label: {
+            Label("Birthdaz", systemImage: "gift.fill")
+        })
+        #endif
     }
 }

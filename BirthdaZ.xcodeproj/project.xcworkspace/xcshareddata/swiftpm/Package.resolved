@@ -1,0 +1,15 @@
+{
+  "originHash" : "2f202f3735f65a22481c7cc77c52e4ec82cd7c29020c96706e794feba08e0d76",
+  "pins" : [
+    {
+      "identity" : "zhdate",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Zhouyuankun/ZhDate",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d713eb0231be1f9640630eabb6de7ab1e78f493e"
+      }
+    }
+  ],
+  "version" : 3
+}

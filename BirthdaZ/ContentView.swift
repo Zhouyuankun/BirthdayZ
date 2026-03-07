@@ -6,61 +6,49 @@
 //
 
 import SwiftUI
+import CoreData
 import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-#if os(macOS)
-            .navigationSplitViewColumnWidth(min: 180, ideal: 200)
-#endif
-            .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
+        #if os(iOS)
+        MainTabView()
+        #elseif os(macOS)
+        MainNavView()
+        #endif
     }
 }
 
+enum MenuItemTag {
+    case homeTag
+    case addTag
+    case setTag
+}
+
+struct MenuItem: Identifiable, Hashable {
+    let id = UUID()
+    let tag: MenuItemTag
+    let title: String
+    let systemImg: String
+}
+
+let menuItems = [
+    MenuItem(tag: .homeTag, title: "Home", systemImg: "house"),
+    MenuItem(tag: .addTag, title: "Add", systemImg: "plus"),
+    MenuItem(tag: .setTag, title: "Settings", systemImg: "gear")
+]
+
+//@ViewBuilder func getDetailView(for tag: MenuItemTag) -> some View {
+//    switch tag {
+//    case .homeTag:
+//        HomeView()
+//    case .addTag:
+//        EditView()
+//    case .setTag:
+//        SettingsView()
+//    }
+//}
+
 #Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+    return ContentView()
 }

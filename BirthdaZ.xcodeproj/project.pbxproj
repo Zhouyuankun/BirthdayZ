@@ -7,21 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B640950D2C3D6F9E009A0825 /* BirthdayModel+DataGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640950C2C3D6F9E009A0825 /* BirthdayModel+DataGeneration.swift */; };
+		B64095112C3D8895009A0825 /* BirthdayModelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64095102C3D8895009A0825 /* BirthdayModelHandler.swift */; };
+		B64095132C3EC76D009A0825 /* Color+BirthdayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64095122C3EC76D009A0825 /* Color+BirthdayModel.swift */; };
+		B640951D2C4D5C9A009A0825 /* BirthdayStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640951C2C4D5C9A009A0825 /* BirthdayStore.swift */; };
+		B65D53A12D65FEFA004166CC /* CustomSwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D53A02D65FEFA004166CC /* CustomSwipeAction.swift */; };
+		B65D53A52D660758004166CC /* PanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D53A42D660756004166CC /* PanGesture.swift */; };
+		B65D53A72D6767B1004166CC /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D53A62D6767B1004166CC /* PersonalView.swift */; };
+		B65D53AB2D68BDCD004166CC /* MyBirthdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D53AA2D68BDCD004166CC /* MyBirthdayView.swift */; };
+		B65D53AF2D6B1E76004166CC /* GiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D53AE2D6B1E76004166CC /* GiftModel.swift */; };
+		B65D53B12D6B2083004166CC /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D53B02D6B2083004166CC /* Date+Helpers.swift */; };
+		B65D53B32D6B20D4004166CC /* Calendar+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D53B22D6B20D4004166CC /* Calendar+Helpers.swift */; };
+		B65D53B52D6B20F1004166CC /* NongDate+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D53B42D6B20F1004166CC /* NongDate+Helpers.swift */; };
+		B65D53B62D6B24DC004166CC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135CB2C3C278D0076DF27 /* SettingsView.swift */; };
+		B65D53B82D6B5C81004166CC /* EditPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D53B72D6B5C81004166CC /* EditPersonalView.swift */; };
 		B69135852C3C26170076DF27 /* BirthdaZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135842C3C26170076DF27 /* BirthdaZApp.swift */; };
 		B69135872C3C26170076DF27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135862C3C26170076DF27 /* ContentView.swift */; };
-		B69135892C3C26170076DF27 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135882C3C26170076DF27 /* Item.swift */; };
-		B691358B2C3C26180076DF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B691358A2C3C26180076DF27 /* Assets.xcassets */; };
 		B691358F2C3C26180076DF27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B691358E2C3C26180076DF27 /* Preview Assets.xcassets */; };
+		B69135C12C3C27420076DF27 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135C02C3C27420076DF27 /* Person.swift */; };
+		B69135C82C3C27810076DF27 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135C72C3C27810076DF27 /* MainTabView.swift */; platformFilter = ios; };
+		B69135CA2C3C27860076DF27 /* MainNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135C92C3C27860076DF27 /* MainNavView.swift */; platformFilters = (macos, ); };
+		B69135CF2C3C278D0076DF27 /* PeopleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135CC2C3C278D0076DF27 /* PeopleListView.swift */; };
+		B69135D72C3C27C80076DF27 /* AnimatedRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135D12C3C27C80076DF27 /* AnimatedRingView.swift */; };
+		B69135D82C3C27C80076DF27 /* Mockjson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135D22C3C27C80076DF27 /* Mockjson.swift */; };
+		B69135DA2C3C27C80076DF27 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135D42C3C27C80076DF27 /* Constant.swift */; };
+		B69135DC2C3C27C80076DF27 /* birthdays.json in Resources */ = {isa = PBXBuildFile; fileRef = B69135D62C3C27C80076DF27 /* birthdays.json */; };
+		B69135E12C3C28270076DF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B69135E02C3C28270076DF27 /* Assets.xcassets */; };
+		B69135E42C3D61570076DF27 /* ZhDate in Frameworks */ = {isa = PBXBuildFile; productRef = B69135E32C3D61570076DF27 /* ZhDate */; };
+		B69135E62C3D68E30076DF27 /* UserDefaults+BirthdayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135E52C3D68E30076DF27 /* UserDefaults+BirthdayModel.swift */; };
+		B6C7D2BA2E8B6ABC008F68A9 /* BirthdayZ.icon in Resources */ = {isa = PBXBuildFile; fileRef = B6C7D2B92E8B6ABC008F68A9 /* BirthdayZ.icon */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B640950C2C3D6F9E009A0825 /* BirthdayModel+DataGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BirthdayModel+DataGeneration.swift"; sourceTree = "<group>"; };
+		B64095102C3D8895009A0825 /* BirthdayModelHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayModelHandler.swift; sourceTree = "<group>"; };
+		B64095122C3EC76D009A0825 /* Color+BirthdayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+BirthdayModel.swift"; sourceTree = "<group>"; };
+		B640951C2C4D5C9A009A0825 /* BirthdayStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayStore.swift; sourceTree = "<group>"; };
+		B65D53A02D65FEFA004166CC /* CustomSwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwipeAction.swift; sourceTree = "<group>"; };
+		B65D53A42D660756004166CC /* PanGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanGesture.swift; sourceTree = "<group>"; };
+		B65D53A62D6767B1004166CC /* PersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
+		B65D53AA2D68BDCD004166CC /* MyBirthdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBirthdayView.swift; sourceTree = "<group>"; };
+		B65D53AE2D6B1E76004166CC /* GiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftModel.swift; sourceTree = "<group>"; };
+		B65D53B02D6B2083004166CC /* Date+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helpers.swift"; sourceTree = "<group>"; };
+		B65D53B22D6B20D4004166CC /* Calendar+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Helpers.swift"; sourceTree = "<group>"; };
+		B65D53B42D6B20F1004166CC /* NongDate+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NongDate+Helpers.swift"; sourceTree = "<group>"; };
+		B65D53B72D6B5C81004166CC /* EditPersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonalView.swift; sourceTree = "<group>"; };
 		B69135812C3C26170076DF27 /* BirthdaZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdaZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69135842C3C26170076DF27 /* BirthdaZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaZApp.swift; sourceTree = "<group>"; };
 		B69135862C3C26170076DF27 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B69135882C3C26170076DF27 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		B691358A2C3C26180076DF27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B691358C2C3C26180076DF27 /* BirthdaZ.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BirthdaZ.entitlements; sourceTree = "<group>"; };
 		B691358E2C3C26180076DF27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B69135C02C3C27420076DF27 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B69135C72C3C27810076DF27 /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		B69135C92C3C27860076DF27 /* MainNavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavView.swift; sourceTree = "<group>"; };
+		B69135CB2C3C278D0076DF27 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B69135CC2C3C278D0076DF27 /* PeopleListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleListView.swift; sourceTree = "<group>"; };
+		B69135D12C3C27C80076DF27 /* AnimatedRingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedRingView.swift; sourceTree = "<group>"; };
+		B69135D22C3C27C80076DF27 /* Mockjson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mockjson.swift; sourceTree = "<group>"; };
+		B69135D42C3C27C80076DF27 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		B69135D62C3C27C80076DF27 /* birthdays.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = birthdays.json; sourceTree = "<group>"; };
+		B69135E02C3C28270076DF27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B69135E52C3D68E30076DF27 /* UserDefaults+BirthdayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+BirthdayModel.swift"; sourceTree = "<group>"; };
+		B6C7D2B92E8B6ABC008F68A9 /* BirthdayZ.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = BirthdayZ.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,12 +76,59 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B69135E42C3D61570076DF27 /* ZhDate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B64095142C3EC871009A0825 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B69135D12C3C27C80076DF27 /* AnimatedRingView.swift */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		B64095152C3EC893009A0825 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B640950C2C3D6F9E009A0825 /* BirthdayModel+DataGeneration.swift */,
+				B69135E52C3D68E30076DF27 /* UserDefaults+BirthdayModel.swift */,
+				B64095122C3EC76D009A0825 /* Color+BirthdayModel.swift */,
+				B65D53B02D6B2083004166CC /* Date+Helpers.swift */,
+				B65D53B22D6B20D4004166CC /* Calendar+Helpers.swift */,
+				B65D53B42D6B20F1004166CC /* NongDate+Helpers.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		B640951B2C4D5C88009A0825 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B640951C2C4D5C9A009A0825 /* BirthdayStore.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		B65D539E2D65FED9004166CC /* SwipeAction */ = {
+			isa = PBXGroup;
+			children = (
+				B65D539F2D65FEE9004166CC /* Helpers */,
+			);
+			path = SwipeAction;
+			sourceTree = "<group>";
+		};
+		B65D539F2D65FEE9004166CC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B65D53A42D660756004166CC /* PanGesture.swift */,
+				B65D53A02D65FEFA004166CC /* CustomSwipeAction.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		B69135782C3C26170076DF27 = {
 			isa = PBXGroup;
 			children = (
@@ -54,11 +148,18 @@
 		B69135832C3C26170076DF27 /* BirthdaZ */ = {
 			isa = PBXGroup;
 			children = (
+				B65D539E2D65FED9004166CC /* SwipeAction */,
+				B640951B2C4D5C88009A0825 /* ViewModel */,
+				B64095152C3EC893009A0825 /* Utils */,
+				B69135BF2C3C27270076DF27 /* Model */,
+				B69135BD2C3C27180076DF27 /* View */,
 				B69135842C3C26170076DF27 /* BirthdaZApp.swift */,
-				B69135862C3C26170076DF27 /* ContentView.swift */,
-				B69135882C3C26170076DF27 /* Item.swift */,
-				B691358A2C3C26180076DF27 /* Assets.xcassets */,
+				B69135D62C3C27C80076DF27 /* birthdays.json */,
+				B69135D42C3C27C80076DF27 /* Constant.swift */,
+				B69135D22C3C27C80076DF27 /* Mockjson.swift */,
 				B691358C2C3C26180076DF27 /* BirthdaZ.entitlements */,
+				B69135E02C3C28270076DF27 /* Assets.xcassets */,
+				B6C7D2B92E8B6ABC008F68A9 /* BirthdayZ.icon */,
 				B691358D2C3C26180076DF27 /* Preview Content */,
 			);
 			path = BirthdaZ;
@@ -70,6 +171,56 @@
 				B691358E2C3C26180076DF27 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B69135BD2C3C27180076DF27 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B69135C62C3C277A0076DF27 /* iOS */,
+				B69135C52C3C276F0076DF27 /* macOS */,
+				B69135C42C3C27630076DF27 /* Shared */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B69135BF2C3C27270076DF27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B69135C02C3C27420076DF27 /* Person.swift */,
+				B64095102C3D8895009A0825 /* BirthdayModelHandler.swift */,
+				B65D53AE2D6B1E76004166CC /* GiftModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B69135C42C3C27630076DF27 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B64095142C3EC871009A0825 /* Components */,
+				B69135CC2C3C278D0076DF27 /* PeopleListView.swift */,
+				B69135CB2C3C278D0076DF27 /* SettingsView.swift */,
+				B69135862C3C26170076DF27 /* ContentView.swift */,
+				B65D53A62D6767B1004166CC /* PersonalView.swift */,
+				B65D53AA2D68BDCD004166CC /* MyBirthdayView.swift */,
+				B65D53B72D6B5C81004166CC /* EditPersonalView.swift */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		B69135C52C3C276F0076DF27 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				B69135C92C3C27860076DF27 /* MainNavView.swift */,
+			);
+			name = macOS;
+			sourceTree = "<group>";
+		};
+		B69135C62C3C277A0076DF27 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B69135C72C3C27810076DF27 /* MainTabView.swift */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +239,9 @@
 			dependencies = (
 			);
 			name = BirthdaZ;
+			packageProductDependencies = (
+				B69135E32C3D61570076DF27 /* ZhDate */,
+			);
 			productName = BirthdaZ;
 			productReference = B69135812C3C26170076DF27 /* BirthdaZ.app */;
 			productType = "com.apple.product-type.application";
@@ -100,7 +254,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					B69135802C3C26170076DF27 = {
 						CreatedOnToolsVersion = 15.4;
@@ -116,6 +270,9 @@
 				Base,
 			);
 			mainGroup = B69135782C3C26170076DF27;
+			packageReferences = (
+				B69135E22C3D61570076DF27 /* XCRemoteSwiftPackageReference "ZhDate" */,
+			);
 			productRefGroup = B69135822C3C26170076DF27 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -131,7 +288,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B691358F2C3C26180076DF27 /* Preview Assets.xcassets in Resources */,
-				B691358B2C3C26180076DF27 /* Assets.xcassets in Resources */,
+				B69135E12C3C28270076DF27 /* Assets.xcassets in Resources */,
+				B6C7D2BA2E8B6ABC008F68A9 /* BirthdayZ.icon in Resources */,
+				B69135DC2C3C27C80076DF27 /* birthdays.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,9 +301,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B640950D2C3D6F9E009A0825 /* BirthdayModel+DataGeneration.swift in Sources */,
+				B65D53B62D6B24DC004166CC /* SettingsView.swift in Sources */,
+				B640951D2C4D5C9A009A0825 /* BirthdayStore.swift in Sources */,
+				B69135D82C3C27C80076DF27 /* Mockjson.swift in Sources */,
+				B65D53B52D6B20F1004166CC /* NongDate+Helpers.swift in Sources */,
+				B65D53AB2D68BDCD004166CC /* MyBirthdayView.swift in Sources */,
+				B69135CF2C3C278D0076DF27 /* PeopleListView.swift in Sources */,
 				B69135872C3C26170076DF27 /* ContentView.swift in Sources */,
-				B69135892C3C26170076DF27 /* Item.swift in Sources */,
+				B69135E62C3D68E30076DF27 /* UserDefaults+BirthdayModel.swift in Sources */,
+				B65D53B32D6B20D4004166CC /* Calendar+Helpers.swift in Sources */,
+				B65D53A52D660758004166CC /* PanGesture.swift in Sources */,
+				B69135CA2C3C27860076DF27 /* MainNavView.swift in Sources */,
+				B65D53B12D6B2083004166CC /* Date+Helpers.swift in Sources */,
+				B69135D72C3C27C80076DF27 /* AnimatedRingView.swift in Sources */,
+				B65D53B82D6B5C81004166CC /* EditPersonalView.swift in Sources */,
+				B69135DA2C3C27C80076DF27 /* Constant.swift in Sources */,
+				B69135C12C3C27420076DF27 /* Person.swift in Sources */,
+				B65D53AF2D6B1E76004166CC /* GiftModel.swift in Sources */,
 				B69135852C3C26170076DF27 /* BirthdaZApp.swift in Sources */,
+				B64095112C3D8895009A0825 /* BirthdayModelHandler.swift in Sources */,
+				B65D53A12D65FEFA004166CC /* CustomSwipeAction.swift in Sources */,
+				B64095132C3EC76D009A0825 /* Color+BirthdayModel.swift in Sources */,
+				B65D53A72D6767B1004166CC /* PersonalView.swift in Sources */,
+				B69135C82C3C27810076DF27 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +365,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -246,6 +427,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -268,11 +450,14 @@
 		B69135932C3C26180076DF27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = BirthdayZ;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BirthdaZ/BirthdaZ.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"BirthdaZ/Preview Content\"";
 				DEVELOPMENT_TEAM = QZ389N5Q44;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -288,13 +473,14 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.celeglow.BirthdaZ;
+				PRODUCT_BUNDLE_IDENTIFIER = com.celeglow.birthdays;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -306,11 +492,14 @@
 		B69135942C3C26180076DF27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = BirthdayZ;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BirthdaZ/BirthdaZ.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"BirthdaZ/Preview Content\"";
 				DEVELOPMENT_TEAM = QZ389N5Q44;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -326,13 +515,14 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.celeglow.BirthdaZ;
+				PRODUCT_BUNDLE_IDENTIFIER = com.celeglow.birthdays;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -363,6 +553,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B69135E22C3D61570076DF27 /* XCRemoteSwiftPackageReference "ZhDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Zhouyuankun/ZhDate";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B69135E32C3D61570076DF27 /* ZhDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B69135E22C3D61570076DF27 /* XCRemoteSwiftPackageReference "ZhDate" */;
+			productName = ZhDate;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B69135792C3C26170076DF27 /* Project object */;
 }
