@@ -85,8 +85,8 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/BirthdaZ.git
-   cd BirthdaZ
+   git clone https://github.com/Zhouyuankun/BirthdayZ.git
+   cd BirthdayZ
    ```
 
 2. **Open in Xcode**
