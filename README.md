@@ -176,33 +176,74 @@ OSLog             - Logging
 
 ```
 BirthdaZ/
-├── BirthdaZApp.swift            # App entry point
-├── ContentView.swift            # Platform routing
-├── Person.swift                 # Person model (@Model)
-├── GiftModel.swift              # Gift model (@Model)
-├── BirthdayModelHandler.swift   # CRUD operations (Actor)
-├── BirthdayStore.swift          # Observable store
+├── App/                         # Application entry point
+│   ├── BirthdaZApp.swift       # Main app @main
+│   ├── ContentView.swift       # Platform routing
+│   └── Constant.swift          # App constants
 │
-├── Views/
-│   ├── MainTabView.swift        # iOS tab navigation
-│   ├── MainNavView.swift        # macOS split view navigation
-│   ├── PeopleListView.swift     # Friends list
-│   ├── PersonalView.swift       # Person detail
-│   ├── EditPersonalView.swift   # Edit form
-│   ├── MyBirthdayView.swift     # User's birthday
-│   └── SettingsView.swift       # App settings
+├── Models/                      # Data models
+│   ├── Person.swift             # Person model (@Model)
+│   ├── GiftModel.swift          # Gift model (@Model)
+│   ├── Gender.swift             # Gender enum
+│   ├── BirthdayCalendar.swift   # Calendar type enum
+│   └── ColorComponents.swift    # Color storage struct
 │
-├── Components/
+├── Views/                       # View layer
+│   ├── Main/
+│   │   ├── MainTabView.swift    # iOS TabView navigation
+│   │   └── MainNavView.swift    # macOS NavigationSplitView
+│   ├── Birthday/
+│   │   ├── MyBirthdayView.swift
+│   │   ├── PeopleListView.swift
+│   │   ├── PersonalView.swift
+│   │   ├── PersonalPage.swift
+│   │   └── EditPersonalView.swift
+│   ├── Settings/
+│   │   └── SettingsView.swift
+│   └── Components/Personal/     # PersonalView subcomponents
+│       ├── BaseInfoView.swift
+│       ├── BirthdayCountView.swift
+│       ├── GiftSentView.swift
+│       ├── WishListView.swift
+│       ├── BirthdayMomentView.swift
+│       └── SingleGiftCard.swift
+│
+├── ViewComponents/              # Reusable components
 │   ├── AnimatedRingView.swift   # Countdown ring
-│   └── SwipeAction/             # Custom swipe actions
+│   ├── FriendCardView.swift
+│   ├── LeapMonthIconView.swift
+│   └── GiftPieChartView.swift
 │
-├── Extensions/
-│   ├── Date+Helpers.swift       # Date utilities
-│   ├── NongDate+Helpers.swift   # Lunar calendar helpers
-│   ├── Calendar+Helpers.swift   # Calendar utilities
-│   └── Color+BirthdayModel.swift
+├── ViewModifiers/               # View modifiers
+│   ├── PersonalCardModifier.swift
+│   └── PersonalButtonStyle.swift
 │
-└── Assets.xcassets/             # Image assets
+├── Services/                    # Data services
+│   └── BirthdayModelHandler.swift  # CRUD operations (Actor)
+│
+├── Extensions/                  # Swift extensions
+│   ├── Date+Helpers.swift
+│   ├── Calendar+Helpers.swift
+│   ├── NongDate+Helpers.swift
+│   ├── Color+Platform.swift     # Cross-platform colors
+│   ├── Color+BirthdayModel.swift
+│   └── UserDefaults+BirthdayModel.swift
+│
+├── Helpers/                     # Utility functions
+│   ├── ZodiacHelper.swift
+│   └── Mockjson.swift
+│
+├── DataGeneration/              # Mock data generation
+│   └── BirthdayModel+DataGeneration.swift
+│
+├── SwipeAction/                 # Swipe action module
+│   └── Helpers/
+│       ├── CustomSwipeAction.swift
+│       └── PanGesture.swift
+│
+└── Resources/                   # Assets and resources
+    ├── Assets.xcassets/
+    └── birthdays.json
 ```
 
 For detailed documentation, see [DEVELOPER_GUIDE.md](DEVELOPER_GUIDE.md).

@@ -38,16 +38,16 @@ let menuItems = [
     MenuItem(tag: .setTag, title: "Settings", systemImg: "gear")
 ]
 
-//@ViewBuilder func getDetailView(for tag: MenuItemTag) -> some View {
-//    switch tag {
-//    case .homeTag:
-//        HomeView()
-//    case .addTag:
-//        EditView()
-//    case .setTag:
-//        SettingsView()
-//    }
-//}
+@ViewBuilder func getDetailView(for tag: MenuItemTag) -> some View {
+    switch tag {
+    case .homeTag:
+        PeopleListView()
+    case .addTag:
+        PersonalView()
+    case .setTag:
+        SettingsView()
+    }
+}
 
 #Preview {
     return ContentView()

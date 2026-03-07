@@ -17,7 +17,9 @@ extension NongDate {
     var sameMonthAndDayInNextYear: NongDate {
         let todayDate = Date.now
         let components = Calendar.current.dateComponents([.year], from: todayDate)
-        let yearNum = components.year!
+        guard let yearNum = components.year else {
+            return self
+        }
         let thisYearBirthdayNongLi = self.sameMonthDayInYear(year: yearNum)
         if(thisYearBirthdayNongLi.toDate() > todayDate) {
             return thisYearBirthdayNongLi

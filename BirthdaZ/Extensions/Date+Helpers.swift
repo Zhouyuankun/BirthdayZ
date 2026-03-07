@@ -11,9 +11,12 @@ import ZhDate
 extension Date {
     func sameMonthDayInYear(year: Int) -> Date {
         let dateComponents = Calendar.current.dateComponents([.month, .day], from: self)
-        let monthNum = dateComponents.month
-        let dayNum = dateComponents.day
-        return Calendar.current.date(from: DateComponents(year: year, month: monthNum, day: dayNum))!
+        guard let monthNum = dateComponents.month,
+              let dayNum = dateComponents.day,
+              let date = Calendar.current.date(from: DateComponents(year: year, month: monthNum, day: dayNum)) else {
+            return self
+        }
+        return date
     }
     
     func equalMonthAndDay(with anotherDate: Date) -> Bool {
@@ -32,7 +35,10 @@ extension Date {
     
     var sameMonthAndDayInNextYear: Date {
         let todayDate = Date.now
-        let yearNum = Calendar.current.dateComponents([.year], from: todayDate).year!
+        let components = Calendar.current.dateComponents([.year], from: todayDate)
+        guard let yearNum = components.year else {
+            return self
+        }
         let thisYearBirthdayGregorian = self.sameMonthDayInYear(year: yearNum)
         if(thisYearBirthdayGregorian > todayDate) {
             return thisYearBirthdayGregorian

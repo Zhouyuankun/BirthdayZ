@@ -10,6 +10,6 @@ import Foundation
 extension Calendar {
     func numberOfDaysBetween(from: Date, to: Date) -> Int {
         let numberOfDays = dateComponents([.day], from: from, to: to)
-        return numberOfDays.day! + 1
+        return (numberOfDays.day ?? 0) + 1
     }
 }

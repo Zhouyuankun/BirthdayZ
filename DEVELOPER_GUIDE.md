@@ -91,45 +91,77 @@ User Action → View → @Environment(\.modelContext) → BirthdayModelHandler �
 
 ```
 BirthdaZ/
-├── BirthdaZ.xcodeproj/              # Xcode project file
-├── BirthdaZ/
-│   ├── BirthdaZApp.swift            # App entry point (@main)
-│   ├── ContentView.swift            # Platform routing view
-│   ├── Constant.swift               # App constants and enums
-│   │
-│   ├── Person.swift                 # Person model (@Model)
-│   ├── GiftModel.swift              # Gift tracking model (@Model)
-│   │
-│   ├── BirthdayStore.swift          # Observable store (@Observable)
-│   ├── BirthdayModelHandler.swift   # Actor-based CRUD handler
-│   │
-│   ├── MainTabView.swift            # iOS tab navigation
-│   ├── MainNavView.swift            # macOS navigation split view
-│   ├── PeopleListView.swift         # Friends list view
-│   ├── PersonalView.swift           # Person detail view
-│   ├── EditPersonalView.swift       # Edit person form
-│   ├── MyBirthdayView.swift         # User's birthday view
-│   ├── SettingsView.swift           # App settings
-│   │
-│   ├── AnimatedRingView.swift       # Countdown ring component
-│   ├── SwipeAction/                 # Custom swipe actions
-│   │   └── Helpers/
-│   │       ├── CustomSwipeAction.swift
-│   │       └── PanGesture.swift
-│   │
-│   ├── Date+Helpers.swift           # Date utilities
-│   ├── NongDate+Helpers.swift       # Lunar calendar helpers
-│   ├── Calendar+Helpers.swift       # Calendar utilities
-│   ├── Color+BirthdayModel.swift    # Color utilities
-│   ├── UserDefaults+BirthdayModel.swift
-│   │
-│   ├── BirthdayModel+DataGeneration.swift
-│   ├── Mockjson.swift
-│   ├── birthdays.json               # Mock data
-│   │
-│   ├── Assets.xcassets/             # Image assets
-│   ├── Preview Content/             # SwiftUI previews
-│   └── BirthdaZ.entitlements        # App entitlements
+├── App/                         # Application entry point
+│   ├── BirthdaZApp.swift       # Main app entry (@main)
+│   ├── ContentView.swift       # Platform routing view
+│   └── Constant.swift          # App constants and enums
+│
+├── Models/                      # Data models
+│   ├── Person.swift             # Person model (@Model)
+│   ├── GiftModel.swift          # Gift tracking model (@Model)
+│   ├── Gender.swift             # Gender enum
+│   ├── BirthdayCalendar.swift   # Calendar type enum
+│   └── ColorComponents.swift    # Color storage struct
+│
+├── Views/                       # View layer
+│   ├── Main/
+│   │   ├── MainTabView.swift    # iOS TabView navigation
+│   │   └── MainNavView.swift    # macOS NavigationSplitView
+│   ├── Birthday/
+│   │   ├── MyBirthdayView.swift # User's birthday view
+│   │   ├── PeopleListView.swift # Friends list view
+│   │   ├── PersonalView.swift   # Person detail view
+│   │   ├── PersonalPage.swift   # Person detail page
+│   │   └── EditPersonalView.swift # Edit person form
+│   ├── Settings/
+│   │   └── SettingsView.swift   # App settings
+│   └── Components/Personal/     # PersonalView subcomponents
+│       ├── BaseInfoView.swift
+│       ├── BirthdayCountView.swift
+│       ├── GiftSentView.swift
+│       ├── WishListView.swift
+│       ├── BirthdayMomentView.swift
+│       └── SingleGiftCard.swift
+│
+├── ViewComponents/              # Reusable UI components
+│   ├── AnimatedRingView.swift   # Countdown ring component
+│   ├── FriendCardView.swift     # Friend card component
+│   ├── LeapMonthIconView.swift  # Leap month icon
+│   └── GiftPieChartView.swift   # Pie chart view
+│
+├── ViewModifiers/               # View modifiers
+│   ├── PersonalCardModifier.swift
+│   └── PersonalButtonStyle.swift
+│
+├── Services/                    # Data services
+│   └── BirthdayModelHandler.swift # Actor-based CRUD handler
+│
+├── Extensions/                  # Swift extensions
+│   ├── Date+Helpers.swift       # Date utilities
+│   ├── Calendar+Helpers.swift   # Calendar utilities
+│   ├── NongDate+Helpers.swift   # Lunar calendar helpers
+│   ├── Color+Platform.swift     # Cross-platform color helpers
+│   ├── Color+BirthdayModel.swift
+│   └── UserDefaults+BirthdayModel.swift
+│
+├── Helpers/                     # Utility functions
+│   ├── ZodiacHelper.swift       # Zodiac calculation helpers
+│   └── Mockjson.swift           # JSON parsing utilities
+│
+├── DataGeneration/              # Data generation
+│   └── BirthdayModel+DataGeneration.swift
+│
+├── SwipeAction/                 # Swipe action module (iOS only)
+│   └── Helpers/
+│       ├── CustomSwipeAction.swift
+│       └── PanGesture.swift
+│
+├── Resources/                   # Assets and resources
+│   ├── Assets.xcassets/         # Image assets
+│   ├── Preview Content/         # SwiftUI previews
+│   └── birthdays.json           # Mock data
+│
+└── BirthdaZ.entitlements        # App entitlements
 ```
 
 ### File Naming Conventions
@@ -140,6 +172,7 @@ BirthdaZ/
 | `View` suffix | `PersonalView.swift` | SwiftUI views |
 | `Model` suffix | `GiftModel.swift` | SwiftData models |
 | `Handler` suffix | `BirthdayModelHandler.swift` | Business logic handlers |
+| `Helper` suffix | `ZodiacHelper.swift` | Utility functions |
 
 ---
 
@@ -147,7 +180,7 @@ BirthdaZ/
 
 ### Person Model
 
-**File:** `BirthdaZ/Person.swift`
+**File:** `Models/Person.swift`
 
 ```swift
 @Model
@@ -173,7 +206,7 @@ final public class Person: Identifiable {
 
 ### GiftModel
 
-**File:** `BirthdaZ/GiftModel.swift`
+**File:** `Models/GiftModel.swift`
 
 ```swift
 @Model
@@ -242,7 +275,7 @@ struct ColorComponents: Codable {
 
 ### BirthdayModelHandler (Actor)
 
-**File:** `BirthdaZ/BirthdayModelHandler.swift`
+**File:** `Services/BirthdayModelHandler.swift`
 
 The `BirthdayModelHandler` is a final actor that provides thread-safe CRUD operations:
 
@@ -309,26 +342,9 @@ BirthdayModelHandler.deleteBirthdayInoDisk(
 )
 ```
 
-### BirthdayStore (@Observable)
-
-**File:** `BirthdaZ/BirthdayStore.swift`
-
-Lightweight observable store for reactive state management:
-
-```swift
-@Observable
-class BirthdayStore {
-    var birthdays: [Person] = []
-
-    func loadBirthdays() async {
-        // Async loading implementation
-    }
-}
-```
-
 ### Platform Routing (ContentView)
 
-**File:** `BirthdaZ/ContentView.swift`
+**File:** `App/ContentView.swift`
 
 The `ContentView` handles platform-specific navigation:
 
@@ -386,7 +402,7 @@ MainNavView
 
 ### AnimatedRingView
 
-**File:** `BirthdaZ/AnimatedRingView.swift`
+**File:** `ViewComponents/AnimatedRingView.swift`
 
 Circular progress indicator for birthday countdown:
 
@@ -419,7 +435,7 @@ AnimatedRingView(ring: Ring(
 
 ### CustomSwipeAction
 
-**File:** `BirthdaZ/SwipeAction/Helpers/CustomSwipeAction.swift`
+**File:** `SwipeAction/Helpers/CustomSwipeAction.swift`
 
 Result builder-based swipe action system:
 
@@ -463,7 +479,7 @@ struct Action: Identifiable {
 
 ### Date+Helpers
 
-**File:** `BirthdaZ/Date+Helpers.swift`
+**File:** `Extensions/Date+Helpers.swift`
 
 | Method | Description |
 |--------|-------------|
@@ -490,7 +506,7 @@ let lunar = Date.now.nongDate
 
 ### NongDate+Helpers
 
-**File:** `BirthdaZ/NongDate+Helpers.swift`
+**File:** `Extensions/NongDate+Helpers.swift`
 
 ```swift
 extension NongDate {
@@ -502,7 +518,7 @@ extension NongDate {
 
 ### Calendar+Helpers
 
-**File:** `BirthdaZ/Calendar+Helpers.swift`
+**File:** `Extensions/Calendar+Helpers.swift`
 
 ```swift
 extension Calendar {
@@ -512,7 +528,7 @@ extension Calendar {
 
 ### Color+BirthdayModel
 
-**File:** `BirthdaZ/Color+BirthdayModel.swift`
+**File:** `Extensions/Color+BirthdayModel.swift`
 
 ```swift
 extension Color {
@@ -522,7 +538,7 @@ extension Color {
 
 ### UserDefaults+BirthdayModel
 
-**File:** `BirthdaZ/UserDefaults+BirthdayModel.swift`
+**File:** `Extensions/UserDefaults+BirthdayModel.swift`
 
 ```swift
 extension UserDefaults {

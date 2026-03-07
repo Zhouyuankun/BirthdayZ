@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import OSLog
+
+fileprivate let logger = Logger(subsystem: "BirthdaZ", category: "EditPersonalView")
 
 struct EditPersonalView: View {
     @Environment(\.modelContext) private var context
@@ -36,8 +39,12 @@ struct EditPersonalView: View {
         editedModel.themeColor = ColorComponents.fromColor(themeColor)
         editedModel.birthdayCalendar = birthdayCalendar
         editedModel.sentGifts = sentGifts
-        
-        try! context.save()
+
+        do {
+            try context.save()
+        } catch {
+            logger.error("Failed to save person: \(error.localizedDescription)")
+        }
     }
 
     var body: some View {
@@ -50,7 +57,7 @@ struct EditPersonalView: View {
                         TextField("Input name here", text: $name)
                             .submitLabel(.done)
                             .padding(.all, 5)
-                            .background(Color(uiColor: .label).opacity(0.1))
+                            .background(Color.adaptiveLabel.opacity(0.1))
                             .clipShape(.rect(cornerRadius: 5))
                     }
                     
@@ -145,7 +152,9 @@ struct EditPersonalView: View {
                         Text("送礼历史")
                             .bold()
                         Spacer()
+                        #if os(iOS)
                         EditButton()
+                        #endif
                         Button(action: {
                             sentGifts.append(GiftModel(person: editedModel, sentDate: .now, giftType: .books, giftDesc: "123"))
                         }, label: {
@@ -186,7 +195,7 @@ struct EditSentGiftView: View {
                     TextField("Input gift description here", text: $sentGift.giftDesc)
                         .submitLabel(.done)
                         .padding(.all, 5)
-                        .background(Color(uiColor: .label).opacity(0.1))
+                        .background(Color.adaptiveLabel.opacity(0.1))
                         .clipShape(.rect(cornerRadius: 5))
                 }
                 HStack {

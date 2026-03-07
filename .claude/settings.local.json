@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xcodebuild -project BirthdaZ.xcodeproj -scheme BirthdaZ -destination 'generic/platform=iOS' build 2>&1 | grep -E \"\\(error:|BUILD\\)\" | tail -5)",
+      "Bash(xcodebuild -project BirthdaZ.xcodeproj -scheme BirthdaZ -destination 'generic/platform=iOS' build 2>&1 | grep -E \"\\(error:|warning:|BUILD\\)\" | tail -15)",
+      "Bash(xcodebuild -project BirthdaZ.xcodeproj -scheme BirthdaZ -destination 'generic/platform=iOS' build 2>&1 | grep -E \"\\(error:|warning:|BUILD\\)\" | tail -10)",
+      "Bash(xcodebuild -project BirthdaZ.xcodeproj -scheme BirthdaZ -destination 'generic/platform=macOS' build 2>&1 | grep -E \"\\(error:|BUILD\\)\" | tail -5)",
+      "Bash(xcodebuild -project BirthdaZ.xcodeproj -scheme BirthdaZ -destination 'generic/platform=macOS' build 2>&1 | grep -E \"\\(error:|BUILD\\)\" | tail -10)"
+    ]
+  }
+}

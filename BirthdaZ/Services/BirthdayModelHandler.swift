@@ -91,16 +91,7 @@ final actor BirthdayModelHandler {
         }
         logger.debug("delete birthdayModel completed")
     }
-    
-    @MainActor
-    static func dumpBirthdaysToDisk(mainContext: ModelContext) throws {
-        let recorded = Self.fetchBirthdays(mainContext: mainContext)
-        let jsonEncoder = JSONEncoder()
-        //jsonEncoder.encode(recorded)
-    }
-}
 
-extension BirthdayModelHandler {
     @MainActor
     static func saveMockedBirthdaysToDisk(mainContext: ModelContext) {
         let mockedModels = Person.mockedModels()

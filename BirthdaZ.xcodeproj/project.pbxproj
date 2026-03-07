@@ -7,68 +7,106 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B640950D2C3D6F9E009A0825 /* BirthdayModel+DataGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640950C2C3D6F9E009A0825 /* BirthdayModel+DataGeneration.swift */; };
-		B64095112C3D8895009A0825 /* BirthdayModelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64095102C3D8895009A0825 /* BirthdayModelHandler.swift */; };
-		B64095132C3EC76D009A0825 /* Color+BirthdayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64095122C3EC76D009A0825 /* Color+BirthdayModel.swift */; };
-		B640951D2C4D5C9A009A0825 /* BirthdayStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640951C2C4D5C9A009A0825 /* BirthdayStore.swift */; };
 		B65D53A12D65FEFA004166CC /* CustomSwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D53A02D65FEFA004166CC /* CustomSwipeAction.swift */; };
 		B65D53A52D660758004166CC /* PanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D53A42D660756004166CC /* PanGesture.swift */; };
-		B65D53A72D6767B1004166CC /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D53A62D6767B1004166CC /* PersonalView.swift */; };
-		B65D53AB2D68BDCD004166CC /* MyBirthdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D53AA2D68BDCD004166CC /* MyBirthdayView.swift */; };
-		B65D53AF2D6B1E76004166CC /* GiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D53AE2D6B1E76004166CC /* GiftModel.swift */; };
-		B65D53B12D6B2083004166CC /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D53B02D6B2083004166CC /* Date+Helpers.swift */; };
-		B65D53B32D6B20D4004166CC /* Calendar+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D53B22D6B20D4004166CC /* Calendar+Helpers.swift */; };
-		B65D53B52D6B20F1004166CC /* NongDate+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D53B42D6B20F1004166CC /* NongDate+Helpers.swift */; };
-		B65D53B62D6B24DC004166CC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135CB2C3C278D0076DF27 /* SettingsView.swift */; };
-		B65D53B82D6B5C81004166CC /* EditPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D53B72D6B5C81004166CC /* EditPersonalView.swift */; };
-		B69135852C3C26170076DF27 /* BirthdaZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135842C3C26170076DF27 /* BirthdaZApp.swift */; };
-		B69135872C3C26170076DF27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135862C3C26170076DF27 /* ContentView.swift */; };
 		B691358F2C3C26180076DF27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B691358E2C3C26180076DF27 /* Preview Assets.xcassets */; };
-		B69135C12C3C27420076DF27 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135C02C3C27420076DF27 /* Person.swift */; };
-		B69135C82C3C27810076DF27 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135C72C3C27810076DF27 /* MainTabView.swift */; platformFilter = ios; };
-		B69135CA2C3C27860076DF27 /* MainNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135C92C3C27860076DF27 /* MainNavView.swift */; platformFilters = (macos, ); };
-		B69135CF2C3C278D0076DF27 /* PeopleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135CC2C3C278D0076DF27 /* PeopleListView.swift */; };
-		B69135D72C3C27C80076DF27 /* AnimatedRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135D12C3C27C80076DF27 /* AnimatedRingView.swift */; };
-		B69135D82C3C27C80076DF27 /* Mockjson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135D22C3C27C80076DF27 /* Mockjson.swift */; };
-		B69135DA2C3C27C80076DF27 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135D42C3C27C80076DF27 /* Constant.swift */; };
 		B69135DC2C3C27C80076DF27 /* birthdays.json in Resources */ = {isa = PBXBuildFile; fileRef = B69135D62C3C27C80076DF27 /* birthdays.json */; };
 		B69135E12C3C28270076DF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B69135E02C3C28270076DF27 /* Assets.xcassets */; };
 		B69135E42C3D61570076DF27 /* ZhDate in Frameworks */ = {isa = PBXBuildFile; productRef = B69135E32C3D61570076DF27 /* ZhDate */; };
-		B69135E62C3D68E30076DF27 /* UserDefaults+BirthdayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69135E52C3D68E30076DF27 /* UserDefaults+BirthdayModel.swift */; };
 		B6C7D2BA2E8B6ABC008F68A9 /* BirthdayZ.icon in Resources */ = {isa = PBXBuildFile; fileRef = B6C7D2B92E8B6ABC008F68A9 /* BirthdayZ.icon */; };
+		B6D5C8D22F5BCB7F0027FAEB /* GiftPieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8D02F5BCB7F0027FAEB /* GiftPieChartView.swift */; };
+		B6D5C8D52F5BCDD60027FAEB /* Color+Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8D32F5BCDD60027FAEB /* Color+Platform.swift */; };
+		B6D5C8DA2F5BD1650027FAEB /* BirthdayCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8D62F5BD1650027FAEB /* BirthdayCalendar.swift */; };
+		B6D5C8DB2F5BD1650027FAEB /* ColorComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8D72F5BD1650027FAEB /* ColorComponents.swift */; };
+		B6D5C8DC2F5BD1650027FAEB /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8D82F5BD1650027FAEB /* Gender.swift */; };
+		B6D5C8E22F5BD4220027FAEB /* FriendCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8E02F5BD4220027FAEB /* FriendCardView.swift */; };
+		B6D5C8E32F5BD4220027FAEB /* LeapMonthIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8E12F5BD4220027FAEB /* LeapMonthIconView.swift */; };
+		B6D5C8F82F5BDF4F0027FAEB /* PersonalButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8F52F5BDF4F0027FAEB /* PersonalButtonStyle.swift */; };
+		B6D5C8F92F5BDF4F0027FAEB /* ZodiacHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8EB2F5BDF4F0027FAEB /* ZodiacHelper.swift */; };
+		B6D5C8FA2F5BDF4F0027FAEB /* BirthdayCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8ED2F5BDF4F0027FAEB /* BirthdayCalendar.swift */; };
+		B6D5C8FB2F5BDF4F0027FAEB /* BirthdayModel+DataGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8E82F5BDF4F0027FAEB /* BirthdayModel+DataGeneration.swift */; };
+		B6D5C8FC2F5BDF4F0027FAEB /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8F12F5BDF4F0027FAEB /* Person.swift */; };
+		B6D5C8FD2F5BDF4F0027FAEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8E62F5BDF4F0027FAEB /* ContentView.swift */; };
+		B6D5C8FE2F5BDF4F0027FAEB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8E52F5BDF4F0027FAEB /* Constant.swift */; };
+		B6D5C8FF2F5BDF4F0027FAEB /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8EF2F5BDF4F0027FAEB /* Gender.swift */; };
+		B6D5C9002F5BDF4F0027FAEB /* PersonalCardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8F62F5BDF4F0027FAEB /* PersonalCardModifier.swift */; };
+		B6D5C9012F5BDF4F0027FAEB /* GiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8F02F5BDF4F0027FAEB /* GiftModel.swift */; };
+		B6D5C9022F5BDF4F0027FAEB /* Mockjson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8EA2F5BDF4F0027FAEB /* Mockjson.swift */; };
+		B6D5C9032F5BDF4F0027FAEB /* BirthdayModelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8F32F5BDF4F0027FAEB /* BirthdayModelHandler.swift */; };
+		B6D5C9042F5BDF4F0027FAEB /* BirthdaZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8E42F5BDF4F0027FAEB /* BirthdaZApp.swift */; };
+		B6D5C9052F5BDF4F0027FAEB /* ColorComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C8EE2F5BDF4F0027FAEB /* ColorComponents.swift */; };
+		B6D5C90B2F5BDF610027FAEB /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9082F5BDF610027FAEB /* Date+Helpers.swift */; };
+		B6D5C90C2F5BDF610027FAEB /* Color+BirthdayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9072F5BDF610027FAEB /* Color+BirthdayModel.swift */; };
+		B6D5C90D2F5BDF610027FAEB /* Calendar+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9062F5BDF610027FAEB /* Calendar+Helpers.swift */; };
+		B6D5C90E2F5BDF610027FAEB /* NongDate+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9092F5BDF610027FAEB /* NongDate+Helpers.swift */; };
+		B6D5C90F2F5BDF610027FAEB /* UserDefaults+BirthdayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C90A2F5BDF610027FAEB /* UserDefaults+BirthdayModel.swift */; };
+		B6D5C9242F5BDF790027FAEB /* BaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9162F5BDF790027FAEB /* BaseInfoView.swift */; };
+		B6D5C9252F5BDF790027FAEB /* MyBirthdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9112F5BDF790027FAEB /* MyBirthdayView.swift */; };
+		B6D5C9262F5BDF790027FAEB /* BirthdayCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9172F5BDF790027FAEB /* BirthdayCountView.swift */; };
+		B6D5C9272F5BDF790027FAEB /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9142F5BDF790027FAEB /* PersonalView.swift */; };
+		B6D5C9282F5BDF790027FAEB /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C91B2F5BDF790027FAEB /* WishListView.swift */; };
+		B6D5C9292F5BDF790027FAEB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9212F5BDF790027FAEB /* SettingsView.swift */; };
+		B6D5C92A2F5BDF790027FAEB /* PersonalPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9132F5BDF790027FAEB /* PersonalPage.swift */; };
+		B6D5C92B2F5BDF790027FAEB /* GiftSentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9192F5BDF790027FAEB /* GiftSentView.swift */; };
+		B6D5C92C2F5BDF790027FAEB /* BirthdayMomentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9182F5BDF790027FAEB /* BirthdayMomentView.swift */; };
+		B6D5C92D2F5BDF790027FAEB /* EditPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9102F5BDF790027FAEB /* EditPersonalView.swift */; };
+		B6D5C92E2F5BDF790027FAEB /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C91F2F5BDF790027FAEB /* MainTabView.swift */; };
+		B6D5C92F2F5BDF790027FAEB /* PeopleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9122F5BDF790027FAEB /* PeopleListView.swift */; };
+		B6D5C9302F5BDF790027FAEB /* MainNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C91E2F5BDF790027FAEB /* MainNavView.swift */; };
+		B6D5C9312F5BDF790027FAEB /* SingleGiftCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C91A2F5BDF790027FAEB /* SingleGiftCard.swift */; };
+		B6D5C9332F5BE0740027FAEB /* AnimatedRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9322F5BE0740027FAEB /* AnimatedRingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B640950C2C3D6F9E009A0825 /* BirthdayModel+DataGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BirthdayModel+DataGeneration.swift"; sourceTree = "<group>"; };
-		B64095102C3D8895009A0825 /* BirthdayModelHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayModelHandler.swift; sourceTree = "<group>"; };
-		B64095122C3EC76D009A0825 /* Color+BirthdayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+BirthdayModel.swift"; sourceTree = "<group>"; };
-		B640951C2C4D5C9A009A0825 /* BirthdayStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayStore.swift; sourceTree = "<group>"; };
 		B65D53A02D65FEFA004166CC /* CustomSwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwipeAction.swift; sourceTree = "<group>"; };
 		B65D53A42D660756004166CC /* PanGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanGesture.swift; sourceTree = "<group>"; };
-		B65D53A62D6767B1004166CC /* PersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
-		B65D53AA2D68BDCD004166CC /* MyBirthdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBirthdayView.swift; sourceTree = "<group>"; };
-		B65D53AE2D6B1E76004166CC /* GiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftModel.swift; sourceTree = "<group>"; };
-		B65D53B02D6B2083004166CC /* Date+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helpers.swift"; sourceTree = "<group>"; };
-		B65D53B22D6B20D4004166CC /* Calendar+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Helpers.swift"; sourceTree = "<group>"; };
-		B65D53B42D6B20F1004166CC /* NongDate+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NongDate+Helpers.swift"; sourceTree = "<group>"; };
-		B65D53B72D6B5C81004166CC /* EditPersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonalView.swift; sourceTree = "<group>"; };
 		B69135812C3C26170076DF27 /* BirthdaZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdaZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B69135842C3C26170076DF27 /* BirthdaZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaZApp.swift; sourceTree = "<group>"; };
-		B69135862C3C26170076DF27 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B691358C2C3C26180076DF27 /* BirthdaZ.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BirthdaZ.entitlements; sourceTree = "<group>"; };
 		B691358E2C3C26180076DF27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B69135C02C3C27420076DF27 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		B69135C72C3C27810076DF27 /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		B69135C92C3C27860076DF27 /* MainNavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavView.swift; sourceTree = "<group>"; };
-		B69135CB2C3C278D0076DF27 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		B69135CC2C3C278D0076DF27 /* PeopleListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleListView.swift; sourceTree = "<group>"; };
-		B69135D12C3C27C80076DF27 /* AnimatedRingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedRingView.swift; sourceTree = "<group>"; };
-		B69135D22C3C27C80076DF27 /* Mockjson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mockjson.swift; sourceTree = "<group>"; };
-		B69135D42C3C27C80076DF27 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		B69135D62C3C27C80076DF27 /* birthdays.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = birthdays.json; sourceTree = "<group>"; };
 		B69135E02C3C28270076DF27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B69135E52C3D68E30076DF27 /* UserDefaults+BirthdayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+BirthdayModel.swift"; sourceTree = "<group>"; };
 		B6C7D2B92E8B6ABC008F68A9 /* BirthdayZ.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = BirthdayZ.icon; sourceTree = "<group>"; };
+		B6D5C8D02F5BCB7F0027FAEB /* GiftPieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftPieChartView.swift; sourceTree = "<group>"; };
+		B6D5C8D32F5BCDD60027FAEB /* Color+Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Platform.swift"; sourceTree = "<group>"; };
+		B6D5C8D62F5BD1650027FAEB /* BirthdayCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayCalendar.swift; sourceTree = "<group>"; };
+		B6D5C8D72F5BD1650027FAEB /* ColorComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorComponents.swift; sourceTree = "<group>"; };
+		B6D5C8D82F5BD1650027FAEB /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		B6D5C8E02F5BD4220027FAEB /* FriendCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCardView.swift; sourceTree = "<group>"; };
+		B6D5C8E12F5BD4220027FAEB /* LeapMonthIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeapMonthIconView.swift; sourceTree = "<group>"; };
+		B6D5C8E42F5BDF4F0027FAEB /* BirthdaZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaZApp.swift; sourceTree = "<group>"; };
+		B6D5C8E52F5BDF4F0027FAEB /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		B6D5C8E62F5BDF4F0027FAEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B6D5C8E82F5BDF4F0027FAEB /* BirthdayModel+DataGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BirthdayModel+DataGeneration.swift"; sourceTree = "<group>"; };
+		B6D5C8EA2F5BDF4F0027FAEB /* Mockjson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockjson.swift; sourceTree = "<group>"; };
+		B6D5C8EB2F5BDF4F0027FAEB /* ZodiacHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacHelper.swift; sourceTree = "<group>"; };
+		B6D5C8ED2F5BDF4F0027FAEB /* BirthdayCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayCalendar.swift; sourceTree = "<group>"; };
+		B6D5C8EE2F5BDF4F0027FAEB /* ColorComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorComponents.swift; sourceTree = "<group>"; };
+		B6D5C8EF2F5BDF4F0027FAEB /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		B6D5C8F02F5BDF4F0027FAEB /* GiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftModel.swift; sourceTree = "<group>"; };
+		B6D5C8F12F5BDF4F0027FAEB /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B6D5C8F32F5BDF4F0027FAEB /* BirthdayModelHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayModelHandler.swift; sourceTree = "<group>"; };
+		B6D5C8F52F5BDF4F0027FAEB /* PersonalButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalButtonStyle.swift; sourceTree = "<group>"; };
+		B6D5C8F62F5BDF4F0027FAEB /* PersonalCardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCardModifier.swift; sourceTree = "<group>"; };
+		B6D5C9062F5BDF610027FAEB /* Calendar+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Helpers.swift"; sourceTree = "<group>"; };
+		B6D5C9072F5BDF610027FAEB /* Color+BirthdayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+BirthdayModel.swift"; sourceTree = "<group>"; };
+		B6D5C9082F5BDF610027FAEB /* Date+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helpers.swift"; sourceTree = "<group>"; };
+		B6D5C9092F5BDF610027FAEB /* NongDate+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NongDate+Helpers.swift"; sourceTree = "<group>"; };
+		B6D5C90A2F5BDF610027FAEB /* UserDefaults+BirthdayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+BirthdayModel.swift"; sourceTree = "<group>"; };
+		B6D5C9102F5BDF790027FAEB /* EditPersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonalView.swift; sourceTree = "<group>"; };
+		B6D5C9112F5BDF790027FAEB /* MyBirthdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBirthdayView.swift; sourceTree = "<group>"; };
+		B6D5C9122F5BDF790027FAEB /* PeopleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListView.swift; sourceTree = "<group>"; };
+		B6D5C9132F5BDF790027FAEB /* PersonalPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalPage.swift; sourceTree = "<group>"; };
+		B6D5C9142F5BDF790027FAEB /* PersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
+		B6D5C9162F5BDF790027FAEB /* BaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInfoView.swift; sourceTree = "<group>"; };
+		B6D5C9172F5BDF790027FAEB /* BirthdayCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayCountView.swift; sourceTree = "<group>"; };
+		B6D5C9182F5BDF790027FAEB /* BirthdayMomentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayMomentView.swift; sourceTree = "<group>"; };
+		B6D5C9192F5BDF790027FAEB /* GiftSentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftSentView.swift; sourceTree = "<group>"; };
+		B6D5C91A2F5BDF790027FAEB /* SingleGiftCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleGiftCard.swift; sourceTree = "<group>"; };
+		B6D5C91B2F5BDF790027FAEB /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
+		B6D5C91E2F5BDF790027FAEB /* MainNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavView.swift; sourceTree = "<group>"; };
+		B6D5C91F2F5BDF790027FAEB /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		B6D5C9212F5BDF790027FAEB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B6D5C9322F5BE0740027FAEB /* AnimatedRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedRingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,35 +121,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B64095142C3EC871009A0825 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				B69135D12C3C27C80076DF27 /* AnimatedRingView.swift */,
-			);
-			name = Components;
-			sourceTree = "<group>";
-		};
-		B64095152C3EC893009A0825 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				B640950C2C3D6F9E009A0825 /* BirthdayModel+DataGeneration.swift */,
-				B69135E52C3D68E30076DF27 /* UserDefaults+BirthdayModel.swift */,
-				B64095122C3EC76D009A0825 /* Color+BirthdayModel.swift */,
-				B65D53B02D6B2083004166CC /* Date+Helpers.swift */,
-				B65D53B22D6B20D4004166CC /* Calendar+Helpers.swift */,
-				B65D53B42D6B20F1004166CC /* NongDate+Helpers.swift */,
-			);
-			name = Utils;
-			sourceTree = "<group>";
-		};
-		B640951B2C4D5C88009A0825 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				B640951C2C4D5C9A009A0825 /* BirthdayStore.swift */,
-			);
-			name = ViewModel;
-			sourceTree = "<group>";
-		};
 		B65D539E2D65FED9004166CC /* SwipeAction */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,15 +157,18 @@
 		B69135832C3C26170076DF27 /* BirthdaZ */ = {
 			isa = PBXGroup;
 			children = (
+				B6D5C9232F5BDF790027FAEB /* Views */,
+				B6D5C8E72F5BDF4F0027FAEB /* App */,
+				B6D5C8E92F5BDF4F0027FAEB /* DataGeneration */,
+				B6D5C8EC2F5BDF4F0027FAEB /* Helpers */,
+				B6D5C8F22F5BDF4F0027FAEB /* Models */,
+				B6D5C8F42F5BDF4F0027FAEB /* Services */,
+				B6D5C8F72F5BDF4F0027FAEB /* ViewModifiers */,
+				B6D5C8D92F5BD1650027FAEB /* Models */,
+				B6D5C8D42F5BCDD60027FAEB /* Extensions */,
+				B6D5C8D12F5BCB7F0027FAEB /* ViewComponents */,
 				B65D539E2D65FED9004166CC /* SwipeAction */,
-				B640951B2C4D5C88009A0825 /* ViewModel */,
-				B64095152C3EC893009A0825 /* Utils */,
-				B69135BF2C3C27270076DF27 /* Model */,
-				B69135BD2C3C27180076DF27 /* View */,
-				B69135842C3C26170076DF27 /* BirthdaZApp.swift */,
 				B69135D62C3C27C80076DF27 /* birthdays.json */,
-				B69135D42C3C27C80076DF27 /* Constant.swift */,
-				B69135D22C3C27C80076DF27 /* Mockjson.swift */,
 				B691358C2C3C26180076DF27 /* BirthdaZ.entitlements */,
 				B69135E02C3C28270076DF27 /* Assets.xcassets */,
 				B6C7D2B92E8B6ABC008F68A9 /* BirthdayZ.icon */,
@@ -173,54 +185,155 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		B69135BD2C3C27180076DF27 /* View */ = {
+		B6D5C8D12F5BCB7F0027FAEB /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
-				B69135C62C3C277A0076DF27 /* iOS */,
-				B69135C52C3C276F0076DF27 /* macOS */,
-				B69135C42C3C27630076DF27 /* Shared */,
+				B6D5C9322F5BE0740027FAEB /* AnimatedRingView.swift */,
+				B6D5C8E02F5BD4220027FAEB /* FriendCardView.swift */,
+				B6D5C8E12F5BD4220027FAEB /* LeapMonthIconView.swift */,
+				B6D5C8D02F5BCB7F0027FAEB /* GiftPieChartView.swift */,
 			);
-			name = View;
+			path = ViewComponents;
 			sourceTree = "<group>";
 		};
-		B69135BF2C3C27270076DF27 /* Model */ = {
+		B6D5C8D42F5BCDD60027FAEB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B69135C02C3C27420076DF27 /* Person.swift */,
-				B64095102C3D8895009A0825 /* BirthdayModelHandler.swift */,
-				B65D53AE2D6B1E76004166CC /* GiftModel.swift */,
+				B6D5C9062F5BDF610027FAEB /* Calendar+Helpers.swift */,
+				B6D5C9072F5BDF610027FAEB /* Color+BirthdayModel.swift */,
+				B6D5C9082F5BDF610027FAEB /* Date+Helpers.swift */,
+				B6D5C9092F5BDF610027FAEB /* NongDate+Helpers.swift */,
+				B6D5C90A2F5BDF610027FAEB /* UserDefaults+BirthdayModel.swift */,
+				B6D5C8D32F5BCDD60027FAEB /* Color+Platform.swift */,
 			);
-			name = Model;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
-		B69135C42C3C27630076DF27 /* Shared */ = {
+		B6D5C8D92F5BD1650027FAEB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B64095142C3EC871009A0825 /* Components */,
-				B69135CC2C3C278D0076DF27 /* PeopleListView.swift */,
-				B69135CB2C3C278D0076DF27 /* SettingsView.swift */,
-				B69135862C3C26170076DF27 /* ContentView.swift */,
-				B65D53A62D6767B1004166CC /* PersonalView.swift */,
-				B65D53AA2D68BDCD004166CC /* MyBirthdayView.swift */,
-				B65D53B72D6B5C81004166CC /* EditPersonalView.swift */,
+				B6D5C8D62F5BD1650027FAEB /* BirthdayCalendar.swift */,
+				B6D5C8D72F5BD1650027FAEB /* ColorComponents.swift */,
+				B6D5C8D82F5BD1650027FAEB /* Gender.swift */,
 			);
-			name = Shared;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		B69135C52C3C276F0076DF27 /* macOS */ = {
+		B6D5C8E72F5BDF4F0027FAEB /* App */ = {
 			isa = PBXGroup;
 			children = (
-				B69135C92C3C27860076DF27 /* MainNavView.swift */,
+				B6D5C8E42F5BDF4F0027FAEB /* BirthdaZApp.swift */,
+				B6D5C8E52F5BDF4F0027FAEB /* Constant.swift */,
+				B6D5C8E62F5BDF4F0027FAEB /* ContentView.swift */,
 			);
-			name = macOS;
+			path = App;
 			sourceTree = "<group>";
 		};
-		B69135C62C3C277A0076DF27 /* iOS */ = {
+		B6D5C8E92F5BDF4F0027FAEB /* DataGeneration */ = {
 			isa = PBXGroup;
 			children = (
-				B69135C72C3C27810076DF27 /* MainTabView.swift */,
+				B6D5C8E82F5BDF4F0027FAEB /* BirthdayModel+DataGeneration.swift */,
 			);
-			name = iOS;
+			path = DataGeneration;
+			sourceTree = "<group>";
+		};
+		B6D5C8EC2F5BDF4F0027FAEB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B6D5C8EA2F5BDF4F0027FAEB /* Mockjson.swift */,
+				B6D5C8EB2F5BDF4F0027FAEB /* ZodiacHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B6D5C8F22F5BDF4F0027FAEB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B6D5C8ED2F5BDF4F0027FAEB /* BirthdayCalendar.swift */,
+				B6D5C8EE2F5BDF4F0027FAEB /* ColorComponents.swift */,
+				B6D5C8EF2F5BDF4F0027FAEB /* Gender.swift */,
+				B6D5C8F02F5BDF4F0027FAEB /* GiftModel.swift */,
+				B6D5C8F12F5BDF4F0027FAEB /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B6D5C8F42F5BDF4F0027FAEB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B6D5C8F32F5BDF4F0027FAEB /* BirthdayModelHandler.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B6D5C8F72F5BDF4F0027FAEB /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				B6D5C8F52F5BDF4F0027FAEB /* PersonalButtonStyle.swift */,
+				B6D5C8F62F5BDF4F0027FAEB /* PersonalCardModifier.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		B6D5C9152F5BDF790027FAEB /* Birthday */ = {
+			isa = PBXGroup;
+			children = (
+				B6D5C9102F5BDF790027FAEB /* EditPersonalView.swift */,
+				B6D5C9112F5BDF790027FAEB /* MyBirthdayView.swift */,
+				B6D5C9122F5BDF790027FAEB /* PeopleListView.swift */,
+				B6D5C9132F5BDF790027FAEB /* PersonalPage.swift */,
+				B6D5C9142F5BDF790027FAEB /* PersonalView.swift */,
+			);
+			path = Birthday;
+			sourceTree = "<group>";
+		};
+		B6D5C91C2F5BDF790027FAEB /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				B6D5C9162F5BDF790027FAEB /* BaseInfoView.swift */,
+				B6D5C9172F5BDF790027FAEB /* BirthdayCountView.swift */,
+				B6D5C9182F5BDF790027FAEB /* BirthdayMomentView.swift */,
+				B6D5C9192F5BDF790027FAEB /* GiftSentView.swift */,
+				B6D5C91A2F5BDF790027FAEB /* SingleGiftCard.swift */,
+				B6D5C91B2F5BDF790027FAEB /* WishListView.swift */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		B6D5C91D2F5BDF790027FAEB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B6D5C91C2F5BDF790027FAEB /* Personal */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B6D5C9202F5BDF790027FAEB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B6D5C91E2F5BDF790027FAEB /* MainNavView.swift */,
+				B6D5C91F2F5BDF790027FAEB /* MainTabView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B6D5C9222F5BDF790027FAEB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B6D5C9212F5BDF790027FAEB /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B6D5C9232F5BDF790027FAEB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6D5C9152F5BDF790027FAEB /* Birthday */,
+				B6D5C91D2F5BDF790027FAEB /* Components */,
+				B6D5C9202F5BDF790027FAEB /* Main */,
+				B6D5C9222F5BDF790027FAEB /* Settings */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,30 +414,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B640950D2C3D6F9E009A0825 /* BirthdayModel+DataGeneration.swift in Sources */,
-				B65D53B62D6B24DC004166CC /* SettingsView.swift in Sources */,
-				B640951D2C4D5C9A009A0825 /* BirthdayStore.swift in Sources */,
-				B69135D82C3C27C80076DF27 /* Mockjson.swift in Sources */,
-				B65D53B52D6B20F1004166CC /* NongDate+Helpers.swift in Sources */,
-				B65D53AB2D68BDCD004166CC /* MyBirthdayView.swift in Sources */,
-				B69135CF2C3C278D0076DF27 /* PeopleListView.swift in Sources */,
-				B69135872C3C26170076DF27 /* ContentView.swift in Sources */,
-				B69135E62C3D68E30076DF27 /* UserDefaults+BirthdayModel.swift in Sources */,
-				B65D53B32D6B20D4004166CC /* Calendar+Helpers.swift in Sources */,
+				B6D5C8E22F5BD4220027FAEB /* FriendCardView.swift in Sources */,
+				B6D5C8E32F5BD4220027FAEB /* LeapMonthIconView.swift in Sources */,
+				B6D5C8D22F5BCB7F0027FAEB /* GiftPieChartView.swift in Sources */,
+				B6D5C9332F5BE0740027FAEB /* AnimatedRingView.swift in Sources */,
+				B6D5C8D52F5BCDD60027FAEB /* Color+Platform.swift in Sources */,
+				B6D5C8F82F5BDF4F0027FAEB /* PersonalButtonStyle.swift in Sources */,
+				B6D5C8F92F5BDF4F0027FAEB /* ZodiacHelper.swift in Sources */,
+				B6D5C8FA2F5BDF4F0027FAEB /* BirthdayCalendar.swift in Sources */,
+				B6D5C8FB2F5BDF4F0027FAEB /* BirthdayModel+DataGeneration.swift in Sources */,
+				B6D5C8FC2F5BDF4F0027FAEB /* Person.swift in Sources */,
+				B6D5C8FD2F5BDF4F0027FAEB /* ContentView.swift in Sources */,
+				B6D5C90B2F5BDF610027FAEB /* Date+Helpers.swift in Sources */,
+				B6D5C90C2F5BDF610027FAEB /* Color+BirthdayModel.swift in Sources */,
+				B6D5C90D2F5BDF610027FAEB /* Calendar+Helpers.swift in Sources */,
+				B6D5C90E2F5BDF610027FAEB /* NongDate+Helpers.swift in Sources */,
+				B6D5C90F2F5BDF610027FAEB /* UserDefaults+BirthdayModel.swift in Sources */,
+				B6D5C8FE2F5BDF4F0027FAEB /* Constant.swift in Sources */,
+				B6D5C8FF2F5BDF4F0027FAEB /* Gender.swift in Sources */,
+				B6D5C9002F5BDF4F0027FAEB /* PersonalCardModifier.swift in Sources */,
+				B6D5C9012F5BDF4F0027FAEB /* GiftModel.swift in Sources */,
+				B6D5C9022F5BDF4F0027FAEB /* Mockjson.swift in Sources */,
+				B6D5C9032F5BDF4F0027FAEB /* BirthdayModelHandler.swift in Sources */,
+				B6D5C9242F5BDF790027FAEB /* BaseInfoView.swift in Sources */,
+				B6D5C9252F5BDF790027FAEB /* MyBirthdayView.swift in Sources */,
+				B6D5C9262F5BDF790027FAEB /* BirthdayCountView.swift in Sources */,
+				B6D5C9272F5BDF790027FAEB /* PersonalView.swift in Sources */,
+				B6D5C9282F5BDF790027FAEB /* WishListView.swift in Sources */,
+				B6D5C9292F5BDF790027FAEB /* SettingsView.swift in Sources */,
+				B6D5C92A2F5BDF790027FAEB /* PersonalPage.swift in Sources */,
+				B6D5C92B2F5BDF790027FAEB /* GiftSentView.swift in Sources */,
+				B6D5C92C2F5BDF790027FAEB /* BirthdayMomentView.swift in Sources */,
+				B6D5C92D2F5BDF790027FAEB /* EditPersonalView.swift in Sources */,
+				B6D5C92E2F5BDF790027FAEB /* MainTabView.swift in Sources */,
+				B6D5C92F2F5BDF790027FAEB /* PeopleListView.swift in Sources */,
+				B6D5C9302F5BDF790027FAEB /* MainNavView.swift in Sources */,
+				B6D5C9312F5BDF790027FAEB /* SingleGiftCard.swift in Sources */,
+				B6D5C9042F5BDF4F0027FAEB /* BirthdaZApp.swift in Sources */,
+				B6D5C9052F5BDF4F0027FAEB /* ColorComponents.swift in Sources */,
 				B65D53A52D660758004166CC /* PanGesture.swift in Sources */,
-				B69135CA2C3C27860076DF27 /* MainNavView.swift in Sources */,
-				B65D53B12D6B2083004166CC /* Date+Helpers.swift in Sources */,
-				B69135D72C3C27C80076DF27 /* AnimatedRingView.swift in Sources */,
-				B65D53B82D6B5C81004166CC /* EditPersonalView.swift in Sources */,
-				B69135DA2C3C27C80076DF27 /* Constant.swift in Sources */,
-				B69135C12C3C27420076DF27 /* Person.swift in Sources */,
-				B65D53AF2D6B1E76004166CC /* GiftModel.swift in Sources */,
-				B69135852C3C26170076DF27 /* BirthdaZApp.swift in Sources */,
-				B64095112C3D8895009A0825 /* BirthdayModelHandler.swift in Sources */,
+				B6D5C8DA2F5BD1650027FAEB /* BirthdayCalendar.swift in Sources */,
+				B6D5C8DB2F5BD1650027FAEB /* ColorComponents.swift in Sources */,
+				B6D5C8DC2F5BD1650027FAEB /* Gender.swift in Sources */,
 				B65D53A12D65FEFA004166CC /* CustomSwipeAction.swift in Sources */,
-				B64095132C3EC76D009A0825 /* Color+BirthdayModel.swift in Sources */,
-				B65D53A72D6767B1004166CC /* PersonalView.swift in Sources */,
-				B69135C82C3C27810076DF27 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

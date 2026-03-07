@@ -8,11 +8,11 @@ import SwiftUI
 
 struct MainNavView: View {
     @State var menuItemId: MenuItem.ID?
-    
+
     func searchMenuItem(for id: UUID) -> MenuItem? {
         return menuItems.first(where: {$0.id == id})
     }
-    
+
     var body: some View {
         NavigationSplitView(sidebar: {
             List(menuItems, selection: $menuItemId) { menuItem in
@@ -37,14 +37,20 @@ struct MainNavView: View {
                 }
             }
         })
+        #if os(macOS)
         .background(VisualEffect())
+        #endif
     }
 }
+
+#if os(macOS)
+import AppKit
 
 struct VisualEffect: NSViewRepresentable {
     func makeNSView(context: Self.Context) -> NSView { return NSVisualEffectView() }
     func updateNSView(_ nsView: NSView, context: Context) { }
 }
+#endif
 
 #Preview {
     MainNavView()

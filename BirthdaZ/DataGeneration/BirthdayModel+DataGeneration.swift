@@ -17,7 +17,11 @@ extension Person {
     }
     
     static func mockedModels() -> [Person] {
-        let data = try! Data(contentsOf: Bundle.main.url(forResource: "birthdays", withExtension: "json")!)
+        guard let url = Bundle.main.url(forResource: "birthdays", withExtension: "json"),
+              let data = try? Data(contentsOf: url) else {
+            logger.error("Failed to load birthdays.json from bundle")
+            return []
+        }
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         do {
@@ -32,8 +36,7 @@ extension Person {
             }
             return mocked
         } catch {
-            logger.error("decode mock json failed")
-            print(error)
+            logger.error("decode mock json failed: \(error.localizedDescription)")
         }
         return []
     }

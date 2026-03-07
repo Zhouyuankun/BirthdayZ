@@ -23,7 +23,7 @@ struct BirthdazApp: App {
         #if os(macOS)
         MenuBarExtra(content: {
             Button("Show panel") {
-                openWindow(id: WindowID.birthdazPanel.rawValue)
+                openWindow(id: Constant.WindowID_BirthdazPanel.rawValue)
             }
             Button("Quit") {
                 NSApplication.shared.terminate(nil)
