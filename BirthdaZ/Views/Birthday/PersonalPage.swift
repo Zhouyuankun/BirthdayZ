@@ -21,11 +21,22 @@ struct PersonalPage: View {
 
     var body: some View {
         VStack(spacing: 15) {
-            Image("avatar")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(height: 300)
-                .clipped()
+            if let data = editedModel.backgroundPhotoData,
+               let image = imageFromData(data) {
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(height: 300)
+                    .frame(maxWidth: UIScreen.main.bounds.width)
+                    .clipped()
+            } else {
+                Image("avatar")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(height: 300)
+                    .frame(maxWidth: UIScreen.main.bounds.width)
+                    .clipped()
+            }
 
             BaseInfoView(editedModel: editedModel) {
                 showEditBaseInfo = true

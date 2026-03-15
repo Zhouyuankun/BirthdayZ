@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import ZhDate
+import PhotosUI
 
 struct EditBaseInfoSheet: View {
     @Environment(\.dismiss) private var dismiss
@@ -21,6 +22,21 @@ struct EditBaseInfoSheet: View {
     @State private var birthDate: Date
     @State private var birthdayCalendar: BirthdayCalendar
 
+    // Photo state - edited values
+    @State private var avatarData: Data?
+    @State private var backgroundPhotoData: Data?
+
+    // Original values for change detection
+    @State private var originalAvatarData: Data?
+    @State private var originalBackgroundData: Data?
+
+    // Photo picker state
+    @State private var selectedAvatarItem: PhotosPickerItem?
+    @State private var selectedBackgroundItem: PhotosPickerItem?
+
+    // Cancel alert state
+    @State private var showCancelAlert = false
+
     init(person: Person) {
         self.person = person
         self._name = State(initialValue: person.name)
@@ -28,6 +44,20 @@ struct EditBaseInfoSheet: View {
         self._themeColor = State(initialValue: person.themeColor.color)
         self._birthDate = State(initialValue: person.birthDate)
         self._birthdayCalendar = State(initialValue: person.birthdayCalendar)
+        _avatarData = State(initialValue: person.avatarData)
+        _backgroundPhotoData = State(initialValue: person.backgroundPhotoData)
+        _originalAvatarData = State(initialValue: person.avatarData)
+        _originalBackgroundData = State(initialValue: person.backgroundPhotoData)
+    }
+
+    private var hasChanges: Bool {
+        name != person.name ||
+        gender != person.gender ||
+        themeColor != person.themeColor.color ||
+        birthDate != person.birthDate ||
+        birthdayCalendar != person.birthdayCalendar ||
+        avatarData != originalAvatarData ||
+        backgroundPhotoData != originalBackgroundData
     }
 
     private func saveChanges() {
@@ -36,6 +66,8 @@ struct EditBaseInfoSheet: View {
         person.themeColor = ColorComponents.fromColor(themeColor)
         person.birthDate = birthDate
         person.birthdayCalendar = birthdayCalendar
+        person.avatarData = avatarData
+        person.backgroundPhotoData = backgroundPhotoData
         dismiss()
     }
 
@@ -97,12 +129,58 @@ struct EditBaseInfoSheet: View {
                             .foregroundStyle(.secondary)
                     }
                 }
+
+                Section("照片") {
+                    // Avatar picker
+                    HStack {
+                        Text("头像")
+                            .bold()
+                        Spacer()
+                        PhotosPicker(selection: $selectedAvatarItem, matching: .images) {
+                            if let data = avatarData,
+                               let image = imageFromData(data) {
+                                image
+                                    .resizable()
+                                    .frame(width: 44, height: 44)
+                                    .clipShape(.circle)
+                            } else {
+                                Image(systemName: "person.circle.fill")
+                                    .font(.title)
+                                    .foregroundStyle(.gray)
+                            }
+                        }
+                    }
+
+                    // Background photo picker
+                    HStack {
+                        Text("背景照片")
+                            .bold()
+                        Spacer()
+                        PhotosPicker(selection: $selectedBackgroundItem, matching: .images) {
+                            if let data = backgroundPhotoData,
+                               let image = imageFromData(data) {
+                                image
+                                    .resizable()
+                                    .frame(width: 60, height: 44)
+                                    .clipShape(.rect(cornerRadius: 8))
+                            } else {
+                                Image(systemName: "photo.fill")
+                                    .font(.title)
+                                    .foregroundStyle(.gray)
+                            }
+                        }
+                    }
+                }
             }
             .navigationTitle("编辑基本信息")
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("取消") {
-                        dismiss()
+                        if hasChanges {
+                            showCancelAlert = true
+                        } else {
+                            dismiss()
+                        }
                     }
                 }
                 ToolbarItem(placement: .confirmationAction) {
@@ -111,6 +189,26 @@ struct EditBaseInfoSheet: View {
                     }
                 }
             }
+        }
+        .onChange(of: selectedAvatarItem) { _, newItem in
+            Task {
+                if let data = try? await newItem?.loadTransferable(type: Data.self),
+                   let compressed = ImageCompressionHelper.compress(data, maxDimension: 800) {
+                    avatarData = compressed
+                }
+            }
+        }
+        .onChange(of: selectedBackgroundItem) { _, newItem in
+            Task {
+                if let data = try? await newItem?.loadTransferable(type: Data.self),
+                   let compressed = ImageCompressionHelper.compress(data, maxDimension: 800) {
+                    backgroundPhotoData = compressed
+                }
+            }
+        }
+        .alert("确定要放弃更改吗？", isPresented: $showCancelAlert) {
+            Button("放弃更改", role: .destructive) { dismiss() }
+            Button("继续编辑", role: .cancel) { }
         }
     }
 }

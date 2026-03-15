@@ -25,11 +25,20 @@ struct BaseInfoView: View {
             }
 
             HStack {
-                Image("avatar")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 50)
-                    .clipShape(.circle)
+                if let data = editedModel.avatarData,
+                   let image = imageFromData(data) {
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 50)
+                        .clipShape(.circle)
+                } else {
+                    Image("avatar")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 50)
+                        .clipShape(.circle)
+                }
 
                 Spacer()
                 VStack(alignment: .trailing) {

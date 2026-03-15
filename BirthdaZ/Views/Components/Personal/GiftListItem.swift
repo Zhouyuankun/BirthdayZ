@@ -38,3 +38,24 @@ struct GiftListItem: View {
         .padding(.vertical, 4)
     }
 }
+
+// MARK: - EditableGift Support
+
+extension GiftListItem {
+    /// Initialize from EditableGift for preview/editing purposes
+    init(from editableGift: EditableGift) {
+        self.gift = GiftModel(
+            person: Person(
+                name: "",
+                nickname: "",
+                gender: .male,
+                birthDate: .now,
+                birthdayCalendar: .gregorian,
+                themeColor: ColorComponents.fromColor(.blue)
+            ),
+            sentDate: editableGift.sentDate,
+            giftType: editableGift.giftType,
+            giftDesc: editableGift.giftDesc
+        )
+    }
+}

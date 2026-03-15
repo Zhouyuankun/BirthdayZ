@@ -21,8 +21,11 @@ final public class Person: Identifiable {
     public var themeColor: ColorComponents
     @Relationship(deleteRule: .cascade, inverse: \GiftModel.person) public var sentGifts: [GiftModel]
 
+    // Photo data
+    public var avatarData: Data?
+    public var backgroundPhotoData: Data?
 
-    init(name: String, nickname: String, gender: Gender, birthDate: Date, birthdayCalendar: BirthdayCalendar, themeColor: ColorComponents, sentGifts: [GiftModel] = []) {
+    init(name: String, nickname: String, gender: Gender, birthDate: Date, birthdayCalendar: BirthdayCalendar, themeColor: ColorComponents, sentGifts: [GiftModel] = [], avatarData: Data? = nil, backgroundPhotoData: Data? = nil) {
         self.id = UUID().uuidString
         self.name = name
         self.nickname = nickname
@@ -31,6 +34,8 @@ final public class Person: Identifiable {
         self.birthdayCalendar = birthdayCalendar
         self.themeColor = themeColor
         self.sentGifts = sentGifts
+        self.avatarData = avatarData
+        self.backgroundPhotoData = backgroundPhotoData
     }
 
     @Transient public var birthDateInChineseCalendar: NongDate {
