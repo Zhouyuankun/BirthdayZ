@@ -23,13 +23,31 @@ A multiplatform birthday management app for iOS and macOS.
 
 ## Installation
 
-```bash
-git clone https://github.com/yourusername/BirthdaZ.git
-cd BirthdaZ
-open BirthdaZ.xcodeproj
-```
+### From Source
 
-Press `Cmd+R` to build and run.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Zhouyuankun/BirthdayZ.git
+   cd BirthdayZ
+   ```
+
+2. **Open in Xcode**
+   ```bash
+   open BirthdaZ.xcodeproj
+   ```
+
+3. **Build and Run**
+   - Select your target device or simulator
+   - Press `Cmd+R` to build and run
+
+### Using Xcode
+
+1. Open Xcode
+2. File > Open
+3. Navigate to the project directory
+4. Select `BirthdaZ.xcodeproj`
+
+---
 
 ## Usage
 
