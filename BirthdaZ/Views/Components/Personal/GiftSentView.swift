@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GiftSentView: View {
     let editedModel: Person
+    var editAction: (() -> Void)? = nil
 
     @State private var sortOption: SortOption = .dateDescending
     @State private var filterCategory: GiftType? = nil
@@ -48,6 +49,9 @@ struct GiftSentView: View {
                 Spacer()
                 Text("\(editedModel.sentGifts.count) 件")
                     .foregroundStyle(.secondary)
+                if let action = editAction {
+                    CardEditButton(action: action)
+                }
             }
 
             // Statistics Dashboard

@@ -49,9 +49,12 @@
 		B6D5C92A2F5BDF790027FAEB /* PersonalPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9132F5BDF790027FAEB /* PersonalPage.swift */; };
 		B6D5C92B2F5BDF790027FAEB /* GiftSentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9192F5BDF790027FAEB /* GiftSentView.swift */; };
 		B6D5C92C2F5BDF790027FAEB /* BirthdayMomentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9182F5BDF790027FAEB /* BirthdayMomentView.swift */; };
-		B6D5C92D2F5BDF790027FAEB /* EditPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9102F5BDF790027FAEB /* EditPersonalView.swift */; };
 		B6D5C92E2F5BDF790027FAEB /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C91F2F5BDF790027FAEB /* MainTabView.swift */; };
 		B6D5C92F2F5BDF790027FAEB /* PeopleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9122F5BDF790027FAEB /* PeopleListView.swift */; };
+		B6D5C9382F5C00000027FAEB /* CardEditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9382F5C00000027FAEA /* CardEditButton.swift */; };
+		B6D5C9392F5C00000027FAEB /* CardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9392F5C00000027FAEA /* CardHeaderView.swift */; };
+		B6D5C93A2F5C00000027FAEB /* EditBaseInfoSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C93A2F5C00000027FAEA /* EditBaseInfoSheet.swift */; };
+		B6D5C93B2F5C00000027FAEB /* ManageGiftsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C93B2F5C00000027FAEA /* ManageGiftsSheet.swift */; };
 		B6D5C9302F5BDF790027FAEB /* MainNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C91E2F5BDF790027FAEB /* MainNavView.swift */; };
 		B6D5C9312F5BDF790027FAEB /* SingleGiftCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C91A2F5BDF790027FAEB /* SingleGiftCard.swift */; };
 		B6D5C9332F5BE0740027FAEB /* AnimatedRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9322F5BE0740027FAEB /* AnimatedRingView.swift */; };
@@ -94,7 +97,6 @@
 		B6D5C9082F5BDF610027FAEB /* Date+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helpers.swift"; sourceTree = "<group>"; };
 		B6D5C9092F5BDF610027FAEB /* NongDate+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NongDate+Helpers.swift"; sourceTree = "<group>"; };
 		B6D5C90A2F5BDF610027FAEB /* UserDefaults+BirthdayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+BirthdayModel.swift"; sourceTree = "<group>"; };
-		B6D5C9102F5BDF790027FAEB /* EditPersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonalView.swift; sourceTree = "<group>"; };
 		B6D5C9112F5BDF790027FAEB /* MyBirthdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBirthdayView.swift; sourceTree = "<group>"; };
 		B6D5C9122F5BDF790027FAEB /* PeopleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListView.swift; sourceTree = "<group>"; };
 		B6D5C9132F5BDF790027FAEB /* PersonalPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalPage.swift; sourceTree = "<group>"; };
@@ -111,6 +113,10 @@
 		B6D5C9322F5BE0740027FAEB /* AnimatedRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedRingView.swift; sourceTree = "<group>"; };
 		B6D5C9342F5BEF000027FAEB /* GiftStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftStatistics.swift; sourceTree = "<group>"; };
 		B6D5C9352F5BEF000027FAEB /* GiftListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftListItem.swift; sourceTree = "<group>"; };
+		B6D5C9382F5C00000027FAEA /* CardEditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardEditButton.swift; sourceTree = "<group>"; };
+		B6D5C9392F5C00000027FAEA /* CardHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHeaderView.swift; sourceTree = "<group>"; };
+		B6D5C93A2F5C00000027FAEA /* EditBaseInfoSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBaseInfoSheet.swift; sourceTree = "<group>"; };
+		B6D5C93B2F5C00000027FAEA /* ManageGiftsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageGiftsSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,7 +289,6 @@
 		B6D5C9152F5BDF790027FAEB /* Birthday */ = {
 			isa = PBXGroup;
 			children = (
-				B6D5C9102F5BDF790027FAEB /* EditPersonalView.swift */,
 				B6D5C9112F5BDF790027FAEB /* MyBirthdayView.swift */,
 				B6D5C9122F5BDF790027FAEB /* PeopleListView.swift */,
 				B6D5C9132F5BDF790027FAEB /* PersonalPage.swift */,
@@ -298,8 +303,12 @@
 				B6D5C9162F5BDF790027FAEB /* BaseInfoView.swift */,
 				B6D5C9172F5BDF790027FAEB /* BirthdayCountView.swift */,
 				B6D5C9182F5BDF790027FAEB /* BirthdayMomentView.swift */,
+				B6D5C9382F5C00000027FAEA /* CardEditButton.swift */,
+				B6D5C9392F5C00000027FAEA /* CardHeaderView.swift */,
+				B6D5C93A2F5C00000027FAEA /* EditBaseInfoSheet.swift */,
 				B6D5C9192F5BDF790027FAEB /* GiftSentView.swift */,
 				B6D5C9352F5BEF000027FAEB /* GiftListItem.swift */,
+				B6D5C93B2F5C00000027FAEA /* ManageGiftsSheet.swift */,
 				B6D5C91A2F5BDF790027FAEB /* SingleGiftCard.swift */,
 				B6D5C91B2F5BDF790027FAEB /* WishListView.swift */,
 			);
@@ -451,9 +460,12 @@
 				B6D5C92A2F5BDF790027FAEB /* PersonalPage.swift in Sources */,
 				B6D5C92B2F5BDF790027FAEB /* GiftSentView.swift in Sources */,
 				B6D5C92C2F5BDF790027FAEB /* BirthdayMomentView.swift in Sources */,
-				B6D5C92D2F5BDF790027FAEB /* EditPersonalView.swift in Sources */,
 				B6D5C92E2F5BDF790027FAEB /* MainTabView.swift in Sources */,
 				B6D5C92F2F5BDF790027FAEB /* PeopleListView.swift in Sources */,
+				B6D5C9382F5C00000027FAEB /* CardEditButton.swift in Sources */,
+				B6D5C9392F5C00000027FAEB /* CardHeaderView.swift in Sources */,
+				B6D5C93A2F5C00000027FAEB /* EditBaseInfoSheet.swift in Sources */,
+				B6D5C93B2F5C00000027FAEB /* ManageGiftsSheet.swift in Sources */,
 				B6D5C9302F5BDF790027FAEB /* MainNavView.swift in Sources */,
 				B6D5C9312F5BDF790027FAEB /* SingleGiftCard.swift in Sources */,
 				B6D5C9042F5BDF4F0027FAEB /* BirthdaZApp.swift in Sources */,

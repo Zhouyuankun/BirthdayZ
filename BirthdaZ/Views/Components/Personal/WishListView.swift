@@ -9,14 +9,11 @@ import SwiftUI
 
 struct WishListView: View {
     let model: Person?
+    var editAction: (() -> Void)? = nil
 
     var body: some View {
         VStack(spacing: 10) {
-            HStack {
-                Text("愿望清单")
-                    .bold()
-                Spacer()
-            }
+            CardHeaderView(title: "愿望清单", editAction: editAction)
             Divider()
         }
     }

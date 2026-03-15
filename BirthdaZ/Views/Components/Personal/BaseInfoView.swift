@@ -9,14 +9,11 @@ import SwiftUI
 
 struct BaseInfoView: View {
     let editedModel: Person
+    var editAction: (() -> Void)? = nil
 
     var body: some View {
         VStack(spacing: 10) {
-            HStack {
-                Text("基础信息")
-                    .bold()
-                Spacer()
-            }
+            CardHeaderView(title: "基础信息", editAction: editAction)
             Divider()
 
             HStack {

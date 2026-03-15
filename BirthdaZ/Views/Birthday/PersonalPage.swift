@@ -15,8 +15,9 @@ struct PersonalPage: View {
     @Environment(\.dismiss) private var dismiss
     let editedModel: Person
 
-    @State var showDeletionAlert: Bool = false
-    @State var showEditSheet: Bool = false
+    @State private var showDeletionAlert: Bool = false
+    @State private var showEditBaseInfo: Bool = false
+    @State private var showManageGifts: Bool = false
 
     var body: some View {
         VStack(spacing: 15) {
@@ -26,14 +27,18 @@ struct PersonalPage: View {
                 .frame(height: 300)
                 .clipped()
 
-            BaseInfoView(editedModel: editedModel)
-                .personalCardStyle()
+            BaseInfoView(editedModel: editedModel) {
+                showEditBaseInfo = true
+            }
+            .personalCardStyle()
 
             BirthdayCountView(editedModel: editedModel)
                 .personalCardStyle()
 
-            GiftSentView(editedModel: editedModel)
-                .personalCardStyle()
+            GiftSentView(editedModel: editedModel) {
+                showManageGifts = true
+            }
+            .personalCardStyle()
 
             WishListView(model: editedModel)
                 .personalCardStyle()
@@ -41,20 +46,11 @@ struct PersonalPage: View {
             BirthdayMomentView(model: editedModel)
                 .personalCardStyle()
 
-            Button(action: {
-                showEditSheet = true
-            }, label: {
-                Label("编辑", systemImage: "pencil")
-            })
-            .foregroundStyle(Color.adaptiveLabel)
-            .buttonStyle(.personalButton)
-            .padding(.top)
-
-            Button(action: {
+            Button(role: .destructive) {
                 showDeletionAlert = true
-            }, label: {
+            } label: {
                 Label("删除", systemImage: "trash")
-            })
+            }
             .foregroundStyle(.red)
             .buttonStyle(.personalButton)
             .padding(.bottom)
@@ -76,8 +72,11 @@ struct PersonalPage: View {
                 showDeletionAlert = false
             }
         }
-        .sheet(isPresented: $showEditSheet) {
-            EditPersonalView(editedModel: editedModel)
+        .sheet(isPresented: $showEditBaseInfo) {
+            EditBaseInfoSheet(person: editedModel)
+        }
+        .sheet(isPresented: $showManageGifts) {
+            ManageGiftsSheet(person: editedModel)
         }
     }
 }

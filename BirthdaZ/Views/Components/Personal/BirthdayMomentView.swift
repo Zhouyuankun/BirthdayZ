@@ -9,14 +9,11 @@ import SwiftUI
 
 struct BirthdayMomentView: View {
     let model: Person?
+    var editAction: (() -> Void)? = nil
 
     var body: some View {
         VStack(spacing: 10) {
-            HStack {
-                Text("生日瞬间")
-                    .bold()
-                Spacer()
-            }
+            CardHeaderView(title: "生日瞬间", editAction: editAction)
             Divider()
 
             ScrollView(.horizontal) {
