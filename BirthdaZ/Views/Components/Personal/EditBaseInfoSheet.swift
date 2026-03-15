@@ -14,7 +14,11 @@ struct EditBaseInfoSheet: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
 
-    @Bindable var person: Person
+    // For editing existing person, this is set. For creating new, this is nil.
+    private let existingPerson: Person?
+
+    // The person being edited or created
+    @State private var person: Person
 
     @State private var name: String
     @State private var gender: Gender
@@ -26,7 +30,7 @@ struct EditBaseInfoSheet: View {
     @State private var avatarData: Data?
     @State private var backgroundPhotoData: Data?
 
-    // Original values for change detection
+    // Original values for change detection (only used for existing person)
     @State private var originalAvatarData: Data?
     @State private var originalBackgroundData: Data?
 
@@ -37,27 +41,68 @@ struct EditBaseInfoSheet: View {
     // Cancel alert state
     @State private var showCancelAlert = false
 
-    init(person: Person) {
-        self.person = person
-        self._name = State(initialValue: person.name)
-        self._gender = State(initialValue: person.gender)
-        self._themeColor = State(initialValue: person.themeColor.color)
-        self._birthDate = State(initialValue: person.birthDate)
-        self._birthdayCalendar = State(initialValue: person.birthdayCalendar)
-        _avatarData = State(initialValue: person.avatarData)
-        _backgroundPhotoData = State(initialValue: person.backgroundPhotoData)
-        _originalAvatarData = State(initialValue: person.avatarData)
-        _originalBackgroundData = State(initialValue: person.backgroundPhotoData)
+    private var isCreatingNew: Bool {
+        existingPerson == nil
+    }
+
+    init(person: Person? = nil) {
+        self.existingPerson = person
+        if let person = person {
+            // Editing existing person
+            _person = State(initialValue: person)
+            _name = State(initialValue: person.name)
+            _gender = State(initialValue: person.gender)
+            _themeColor = State(initialValue: person.themeColor.color)
+            _birthDate = State(initialValue: person.birthDate)
+            _birthdayCalendar = State(initialValue: person.birthdayCalendar)
+            _avatarData = State(initialValue: person.avatarData)
+            _backgroundPhotoData = State(initialValue: person.backgroundPhotoData)
+            _originalAvatarData = State(initialValue: person.avatarData)
+            _originalBackgroundData = State(initialValue: person.backgroundPhotoData)
+        } else {
+            // Creating new person with defaults
+            let newPerson = Person(
+                name: "",
+                nickname: "",
+                gender: .male,
+                birthDate: .now,
+                birthdayCalendar: .gregorian,
+                themeColor: ColorComponents.fromColor(.blue)
+            )
+            _person = State(initialValue: newPerson)
+            _name = State(initialValue: "")
+            _gender = State(initialValue: .male)
+            _themeColor = State(initialValue: .blue)
+            _birthDate = State(initialValue: .now)
+            _birthdayCalendar = State(initialValue: .gregorian)
+            _avatarData = State(initialValue: nil)
+            _backgroundPhotoData = State(initialValue: nil)
+            _originalAvatarData = State(initialValue: nil)
+            _originalBackgroundData = State(initialValue: nil)
+        }
     }
 
     private var hasChanges: Bool {
-        name != person.name ||
-        gender != person.gender ||
-        themeColor != person.themeColor.color ||
-        birthDate != person.birthDate ||
-        birthdayCalendar != person.birthdayCalendar ||
-        avatarData != originalAvatarData ||
-        backgroundPhotoData != originalBackgroundData
+        if isCreatingNew {
+            // For new person, any non-default value is a change
+            return !name.isEmpty ||
+                   gender != .male ||
+                   themeColor != .blue ||
+                   birthDate != Date.now ||
+                   birthdayCalendar != .gregorian ||
+                   avatarData != nil ||
+                   backgroundPhotoData != nil
+        } else {
+            // For existing person, compare to original
+            guard let existingPerson = existingPerson else { return false }
+            return name != existingPerson.name ||
+                   gender != existingPerson.gender ||
+                   themeColor != existingPerson.themeColor.color ||
+                   birthDate != existingPerson.birthDate ||
+                   birthdayCalendar != existingPerson.birthdayCalendar ||
+                   avatarData != originalAvatarData ||
+                   backgroundPhotoData != originalBackgroundData
+        }
     }
 
     private func saveChanges() {
@@ -68,6 +113,11 @@ struct EditBaseInfoSheet: View {
         person.birthdayCalendar = birthdayCalendar
         person.avatarData = avatarData
         person.backgroundPhotoData = backgroundPhotoData
+
+        if isCreatingNew {
+            context.insert(person)
+        }
+
         dismiss()
     }
 
@@ -172,7 +222,7 @@ struct EditBaseInfoSheet: View {
                     }
                 }
             }
-            .navigationTitle("编辑基本信息")
+            .navigationTitle(isCreatingNew ? "新建联系人" : "编辑基本信息")
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("取消") {
@@ -206,8 +256,8 @@ struct EditBaseInfoSheet: View {
                 }
             }
         }
-        .alert("确定要放弃更改吗？", isPresented: $showCancelAlert) {
-            Button("放弃更改", role: .destructive) { dismiss() }
+        .alert(isCreatingNew ? "确定要取消创建吗？" : "确定要放弃更改吗？", isPresented: $showCancelAlert) {
+            Button(isCreatingNew ? "取消创建" : "放弃更改", role: .destructive) { dismiss() }
             Button("继续编辑", role: .cancel) { }
         }
     }

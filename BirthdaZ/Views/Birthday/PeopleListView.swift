@@ -17,6 +17,8 @@ struct PeopleListView: View {
 
     @Query var birthdays: [Person]
 
+    @State private var showAddPersonSheet = false
+
     var sortedBirthdays: [Person] {
         return birthdays.sorted {
             $0.daysToNextBirthday < $1.daysToNextBirthday
@@ -54,21 +56,24 @@ struct PeopleListView: View {
             .toolbar {
                 #if os(iOS)
                 ToolbarItem(placement: .topBarTrailing, content: {
-                    NavigationLink(destination: {
-                        PersonalView()
+                    Button(action: {
+                        showAddPersonSheet = true
                     }, label: {
                         Image(systemName: "plus")
                     })
                 })
                 #elseif os(macOS)
                 ToolbarItem(placement: .automatic, content: {
-                    NavigationLink(destination: {
-                        PersonalView()
+                    Button(action: {
+                        showAddPersonSheet = true
                     }, label: {
                         Image(systemName: "plus")
                     })
                 })
                 #endif
+            }
+            .sheet(isPresented: $showAddPersonSheet) {
+                EditBaseInfoSheet(person: nil)
             }
             .animation(.smooth, value: sortedBirthdays)
         }
