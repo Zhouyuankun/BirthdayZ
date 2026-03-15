@@ -55,6 +55,8 @@
 		B6D5C9302F5BDF790027FAEB /* MainNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C91E2F5BDF790027FAEB /* MainNavView.swift */; };
 		B6D5C9312F5BDF790027FAEB /* SingleGiftCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C91A2F5BDF790027FAEB /* SingleGiftCard.swift */; };
 		B6D5C9332F5BE0740027FAEB /* AnimatedRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9322F5BE0740027FAEB /* AnimatedRingView.swift */; };
+		B6D5C9362F5BEF000027FAEB /* GiftStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9342F5BEF000027FAEB /* GiftStatistics.swift */; };
+		B6D5C9372F5BEF000027FAEB /* GiftListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D5C9352F5BEF000027FAEB /* GiftListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +109,8 @@
 		B6D5C91F2F5BDF790027FAEB /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		B6D5C9212F5BDF790027FAEB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B6D5C9322F5BE0740027FAEB /* AnimatedRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedRingView.swift; sourceTree = "<group>"; };
+		B6D5C9342F5BEF000027FAEB /* GiftStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftStatistics.swift; sourceTree = "<group>"; };
+		B6D5C9352F5BEF000027FAEB /* GiftListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +244,7 @@
 		B6D5C8EC2F5BDF4F0027FAEB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B6D5C9342F5BEF000027FAEB /* GiftStatistics.swift */,
 				B6D5C8EA2F5BDF4F0027FAEB /* Mockjson.swift */,
 				B6D5C8EB2F5BDF4F0027FAEB /* ZodiacHelper.swift */,
 			);
@@ -294,6 +299,7 @@
 				B6D5C9172F5BDF790027FAEB /* BirthdayCountView.swift */,
 				B6D5C9182F5BDF790027FAEB /* BirthdayMomentView.swift */,
 				B6D5C9192F5BDF790027FAEB /* GiftSentView.swift */,
+				B6D5C9352F5BEF000027FAEB /* GiftListItem.swift */,
 				B6D5C91A2F5BDF790027FAEB /* SingleGiftCard.swift */,
 				B6D5C91B2F5BDF790027FAEB /* WishListView.swift */,
 			);
@@ -457,6 +463,8 @@
 				B6D5C8DB2F5BD1650027FAEB /* ColorComponents.swift in Sources */,
 				B6D5C8DC2F5BD1650027FAEB /* Gender.swift in Sources */,
 				B65D53A12D65FEFA004166CC /* CustomSwipeAction.swift in Sources */,
+				B6D5C9362F5BEF000027FAEB /* GiftStatistics.swift in Sources */,
+				B6D5C9372F5BEF000027FAEB /* GiftListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
